@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1PVN — The friendly CRM for investment facilitation</title>
+  <meta name="description" content="1PVN is the warm, approachable Private Sector Mechanism CRM that helps chambers and mechanisms match investors to opportunities, run consultations, reach members on every channel, and report with confidence." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="1PVN home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" role="img">
+            <defs>
+              <linearGradient id="boltGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2dd4bf"/>
+                <stop offset="50%" stop-color="#38bdf8"/>
+                <stop offset="100%" stop-color="#fb7185"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#boltGrad)"/>
+            <path d="M13 2 L4 14 h6 l-1 8 9 -12 h-6 z" fill="#ffffff"/>
+          </svg>
+        </span>
+        <span class="brand-name">1PVN</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#matching">Matching</a>
+        <a href="#channels">Channels</a>
+        <a href="#ai">AI</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm" href="https://app.1pvn.com">Sign in</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">👋 A Private Sector Mechanism, made friendly</p>
+        <h1>The warm little CRM for<br><span class="grad-text">investment facilitation</span></h1>
+        <p class="lead">
+          1PVN helps chambers and private-sector mechanisms match investors to the
+          right opportunities, run consultations, and report with confidence — all in
+          one welcoming place your whole team will actually enjoy using.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://app.1pvn.com">Sign in</a>
+          <a class="btn btn-ghost" href="#matching">See it in action</a>
+        </div>
+        <p class="hero-note">No setup headaches • Friendly onboarding • Your data, your region</p>
+      </div>
+    </section>
+
+    <!-- ===== Matching preview (centerpiece) ===== -->
+    <section class="section" id="matching">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">🤝 Investor match management</p>
+          <h2>Pair the right investor with the right opportunity</h2>
+          <p class="section-sub">
+            A calm, visual matching board your team will love. See investors, opportunities,
+            and smart suggested matches side by side — then move them forward together.
+          </p>
+        </div>
+
+        <div class="board" role="img" aria-label="Matching board preview showing investors, opportunities, and suggested matches with match scores and status chips">
+          <!-- Investors column -->
+          <div class="board-col">
+            <div class="board-col-head">
+              <span class="col-dot dot-sky" aria-hidden="true"></span>
+              <h3>Investors</h3>
+              <span class="count">12</span>
+            </div>
+            <article class="mini-card">
+              <div class="avatar grad-sky" aria-hidden="true">NV</div>
+              <div>
+                <p class="mc-title">Nordvind Capital</p>
+                <p class="mc-sub">Renewables • €40M ticket</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="avatar grad-mint" aria-hidden="true">AG</div>
+              <div>
+                <p class="mc-title">Aurora Growth</p>
+                <p class="mc-sub">Agritech • Series B</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="avatar grad-coral" aria-hidden="true">KH</div>
+              <div>
+                <p class="mc-title">Kalye Holdings</p>
+                <p class="mc-sub">Infrastructure • PPP</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Suggested matches column -->
+          <div class="board-col board-col-center">
+            <div class="board-col-head">
+              <span class="col-dot dot-coral" aria-hidden="true"></span>
+              <h3>Suggested matches</h3>
+              <span class="badge-ai">AI</span>
+            </div>
+
+            <article class="match-card">
+              <div class="match-row">
+                <span class="chip chip-investor">Nordvind Capital</span>
+                <span class="link-icon" aria-hidden="true">↔</span>
+                <span class="chip chip-opp">Cebu Solar Park</span>
+              </div>
+              <div class="match-meta">
+                <span class="score-pill score-high">92% match</span>
+                <span class="status-chip status-suggested">Suggested</span>
+              </div>
+            </article>
+
+            <article class="match-card">
+              <div class="match-row">
+                <span class="chip chip-investor">Aurora Growth</span>
+                <span class="link-icon" aria-hidden="true">↔</span>
+                <span class="chip chip-opp">GreenHarvest Co-op</span>
+              </div>
+              <div class="match-meta">
+                <span class="score-pill score-mid">84% match</span>
+                <span class="status-chip status-introduced">Introduced</span>
+              </div>
+            </article>
+
+            <article class="match-card">
+              <div class="match-row">
+                <span class="chip chip-investor">Kalye Holdings</span>
+                <span class="link-icon" aria-hidden="true">↔</span>
+                <span class="chip chip-opp">Davao Transit Hub</span>
+              </div>
+              <div class="match-meta">
+                <span class="score-pill score-high">90% match</span>
+                <span class="status-chip status-progress">In progress</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Opportunities column -->
+          <div class="board-col">
+            <div class="board-col-head">
+              <span class="col-dot dot-mint" aria-hidden="true"></span>
+              <h3>Opportunities</h3>
+              <span class="count">18</span>
+            </div>
+            <article class="mini-card">
+              <div class="avatar grad-mint" aria-hidden="true">CS</div>
+              <div>
+                <p class="mc-title">Cebu Solar Park</p>
+                <p class="mc-sub">Energy • Cluster 3</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="avatar grad-sky" aria-hidden="true">GH</div>
+              <div>
+                <p class="mc-title">GreenHarvest Co-op</p>
+                <p class="mc-sub">Sustainable • Cluster 2</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="avatar grad-coral" aria-hidden="true">DT</div>
+              <div>
+                <p class="mc-title">Davao Transit Hub</p>
+                <p class="mc-sub">Infrastructure • PPP</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Omnichannel ===== -->
+    <section class="section section-tint" id="channels">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">💬 Omnichannel outreach</p>
+          <h2>Meet your members where they are</h2>
+          <p class="section-sub">
+            Reach investors, partners, and LGUs on every channel — without juggling five
+            different tools. It all lives in 1PVN, neatly tied to each contact.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <span class="feature-icon ic-sky" aria-hidden="true">✉️</span>
+            <h3>Email campaigns</h3>
+            <p>Send warm, on-brand updates and invitations with open and click tracking.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon ic-coral" aria-hidden="true">📣</span>
+            <h3>Social posts</h3>
+            <p>Draft and schedule posts that keep your community in the loop.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon ic-mint" aria-hidden="true">📅</span>
+            <h3>Event invites &amp; RSVPs</h3>
+            <p>Beautiful invites with iCal, reminders, QR check-in, and live RSVP status.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon ic-sky" aria-hidden="true">💚</span>
+            <h3>WhatsApp &amp; SMS</h3>
+            <p>Quick, friendly nudges that land where people already chat.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon ic-coral" aria-hidden="true">🔗</span>
+            <h3>Shareable links</h3>
+            <p>One tidy link for registrations, tracking, and submissions — no friction.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon ic-mint" aria-hidden="true">📊</span>
+            <h3>Engagement scoring</h3>
+            <p>See who's leaning in, so you can follow up at just the right moment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AI integration ===== -->
+    <section class="section" id="ai">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">✨ AI built in</p>
+          <h2>Your friendly AI co-pilot</h2>
+          <p class="section-sub">
+            1PVN does the tedious bits so your team can focus on relationships.
+            Everything stays a draft until a human says yes.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card ai-card">
+            <span class="feature-icon ic-mint" aria-hidden="true">📝</span>
+            <h3>AI minutes &amp; summaries</h3>
+            <p>Turn meeting recordings into tidy minutes and action items — ready for review.</p>
+          </article>
+          <article class="feature-card ai-card">
+            <span class="feature-icon ic-sky" aria-hidden="true">🎯</span>
+            <h3>Investor–opportunity matching</h3>
+            <p>Smart suggestions with match scores, so the best pairings rise to the top.</p>
+          </article>
+          <article class="feature-card ai-card">
+            <span class="feature-icon ic-coral" aria-hidden="true">📄</span>
+            <h3>Document drafting</h3>
+            <p>First drafts of concept notes and policy briefs in your voice, in seconds.</p>
+          </article>
+          <article class="feature-card ai-card">
+            <span class="feature-icon ic-mint" aria-hidden="true">🪪</span>
+            <h3>Data extraction</h3>
+            <p>Snap a business card or upload notes — contacts and details fill themselves in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section class="section section-tint" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">🌱 Simple, friendly pricing</p>
+          <h2>Pick the plan that fits your mechanism</h2>
+          <p class="section-sub">Start free, grow when you're ready. Prices below are placeholders while we finalize plans.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <article class="price-card">
+            <h3 class="price-name">Starter</h3>
+            <p class="price-amount">Free</p>
+            <p class="price-period">to get going</p>
+            <a class="btn btn-soft btn-block" href="https://app.1pvn.com">Sign in</a>
+            <ul class="price-features">
+              <li><span aria-hidden="true">✓</span> 1 chamber / tenant</li>
+              <li><span aria-hidden="true">✓</span> Basic investor matching</li>
+              <li><span aria-hidden="true">✓</span> Email campaigns</li>
+              <li class="muted"><span aria-hidden="true">–</span> AI features</li>
+              <li><span aria-hidden="true">✓</span> EU / USA / Asia region choice</li>
+              <li><span aria-hidden="true">✓</span> Community support</li>
+            </ul>
+          </article>
+
+          <!-- Growth (popular) -->
+          <article class="price-card price-card-featured">
+            <span class="popular-tag">Most popular</span>
+            <h3 class="price-name">Growth</h3>
+            <p class="price-amount">$X<span class="price-mo">/mo</span></p>
+            <p class="price-period">placeholder price</p>
+            <a class="btn btn-primary btn-block" href="https://app.1pvn.com">Sign in</a>
+            <ul class="price-features">
+              <li><span aria-hidden="true">✓</span> Up to 5 chambers / tenants</li>
+              <li><span aria-hidden="true">✓</span> Full investor matching board</li>
+              <li><span aria-hidden="true">✓</span> Omnichannel campaigns</li>
+              <li><span aria-hidden="true">✓</span> AI co-pilot included</li>
+              <li><span aria-hidden="true">✓</span> EU / USA / Asia region choice</li>
+              <li><span aria-hidden="true">✓</span> Priority support</li>
+            </ul>
+          </article>
+
+          <!-- Enterprise -->
+          <article class="price-card">
+            <h3 class="price-name">Enterprise</h3>
+            <p class="price-amount">Custom</p>
+            <p class="price-period">let's talk</p>
+            <a class="btn btn-soft btn-block" href="mailto:hello@1pvn.com?subject=1PVN%20Enterprise">Book a demo</a>
+            <ul class="price-features">
+              <li><span aria-hidden="true">✓</span> Unlimited chambers / tenants</li>
+              <li><span aria-hidden="true">✓</span> Advanced matching &amp; scoring</li>
+              <li><span aria-hidden="true">✓</span> All omnichannel campaigns</li>
+              <li><span aria-hidden="true">✓</span> AI co-pilot + custom prompts</li>
+              <li><span aria-hidden="true">✓</span> Dedicated data residency region</li>
+              <li><span aria-hidden="true">✓</span> Dedicated success manager</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Data residency strip ===== -->
+    <section class="residency">
+      <div class="container residency-inner">
+        <span class="residency-icon" aria-hidden="true">🌍</span>
+        <p>
+          <strong>Your data, your region.</strong> Choose where 1PVN keeps your data —
+          <span class="region-pill">EU</span>
+          <span class="region-pill">USA</span>
+          <span class="region-pill">Asia</span>
+          — so you stay comfortable and compliant.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CTA band ===== -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Ready to bring your mechanism online?</h2>
+        <p>Join the chambers and mechanisms making investment facilitation feel friendly.</p>
+        <a class="btn btn-light" href="https://app.1pvn.com">Sign in</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30" role="img">
+            <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#boltGrad)"/>
+            <path d="M13 2 L4 14 h6 l-1 8 9 -12 h-6 z" fill="#ffffff"/>
+          </svg>
+        </span>
+        <div>
+          <p class="brand-name">1PVN</p>
+          <p class="footer-tag">The friendly CRM for investment facilitation.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#matching">Matching</a>
+        <a href="#channels">Channels</a>
+        <a href="#ai">AI</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://app.1pvn.com">Sign in</a>
+        <a href="mailto:hello@1pvn.com">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> 1PVN. Made with care for private-sector mechanisms.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
