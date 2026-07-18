@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Sector Consultation Mechanism — Investment Pipeline Platform</title>
+</head>
+<body>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1e293b;
+  --navy2:#334155;
+  --gold:#38bdf8;
+  --gold2:#7dd3fc;
+  --blue:#1565C0;
+  --bll:#E3EDF8;
+  --blt:#0D3F7A;
+  --teal:#1B7A5A;
+  --tll:#E0F2EC;
+  --tlt:#0D4A35;
+  --amber:#B8860B;
+  --aml:#FDF3D9;
+  --amt:#7A5A08;
+  --green:#2E7D32;
+  --gnl:#E8F5E9;
+  --gnt:#1B5E20;
+  --red:#C62828;
+  --rdl:#FFEBEE;
+  --rdt:#8B1A1A;
+  --gray:#546E7A;
+  --gyl:#ECEFF1;
+  --gyt:#37474F;
+  --purple:#512DA8;
+  --pul:#EDE7F6;
+  --put:#311B92;
+  --surf:#FFFFFF;
+  --bg:#F5F7FA;
+  --bg2:#EEF1F6;
+  --bdr:#D8DEE9;
+  --bdr2:#C0C8D8;
+  --txt:#1A1F2E;
+  --mut:#5A6478;
+  --sub:#8A95A8;
+}
+
+body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--txt);font-size:13px;line-height:1.5;min-height:100vh}
+
+/* ── TOP NAV ── */
+.topbar{background:var(--navy);border-bottom:3px solid var(--gold);display:flex;align-items:center;padding:0 0 0 18px;height:54px;gap:0;position:sticky;top:0;z-index:100}
+.eccp-logo{display:flex;align-items:center;gap:10px;margin-right:18px;text-decoration:none;flex-shrink:0}
+.eccp-seal{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+.eccp-seal svg{width:24px;height:24px}
+.eccp-wordmark{display:flex;flex-direction:column;line-height:1.1}
+.eccp-name{color:#fff;font-size:13px;font-weight:700;letter-spacing:0.5px}
+.eccp-tagline{color:var(--gold2);font-size:9px;letter-spacing:0.3px;font-weight:400}
+.nav-divider{width:1px;height:30px;background:rgba(255,255,255,0.15);margin:0 6px;flex-shrink:0}
+.ntab{padding:0 13px;height:54px;border:none;background:transparent;color:rgba(255,255,255,0.6);font-size:11.5px;cursor:pointer;font-family:inherit;font-weight:500;letter-spacing:0.2px;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all 0.15s;white-space:nowrap;flex-shrink:0}
+.ntab:hover{color:#fff;background:rgba(255,255,255,0.07)}
+.ntab.on{color:#fff;border-bottom-color:var(--gold);background:rgba(200,168,75,0.1)}
+.nright{margin-left:auto;display:flex;align-items:center;gap:0;flex-shrink:0}
+.nright-btn{padding:0 14px;height:54px;border:none;background:transparent;color:rgba(255,255,255,0.55);font-size:11px;cursor:pointer;font-family:inherit}
+.nright-btn:hover{color:#fff}
+.nav-cta{background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:0 16px;height:54px;border:none;cursor:pointer;font-family:inherit;letter-spacing:0.3px}
+.nav-cta:hover{background:var(--gold2)}
+.ava{width:32px;height:32px;border-radius:50%;background:var(--navy2);border:2px solid var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 14px}
+
+/* ── SCREENS ── */
+.screen{display:none;padding:20px;max-width:1360px;margin:0 auto}
+.screen.on{display:block}
+
+/* ── DUAL LAYOUT ── */
+.dual{display:grid;grid-template-columns:288px 1fr;gap:20px;align-items:start}
+.plbl{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;text-align:center;padding:4px 10px;background:var(--bg2);border-radius:4px;border:0.5px solid var(--bdr)}
+.wlbl{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;padding:4px 10px;background:var(--bg2);border-radius:4px;border:0.5px solid var(--bdr);display:inline-block}
+
+/* ── PHONE FRAME ── */
+.pwrap{background:#0f0f1a;border-radius:32px;padding:10px;box-shadow:0 0 0 1px #1a1a30,0 8px 32px rgba(0,43,92,0.3)}
+.pnotch{width:80px;height:18px;background:#0f0f1a;border-radius:0 0 12px 12px;margin:0 auto 7px;position:relative}
+.pnotch::after{content:'';width:44px;height:3px;background:#111;border-radius:2px;position:absolute;top:8px;left:18px}
+.pscreen{background:#fff;border-radius:22px;overflow:hidden;min-height:560px;display:flex;flex-direction:column}
+.pbar{background:var(--navy);color:#fff;padding:6px 13px;font-size:10px;display:flex;justify-content:space-between;align-items:center}
+.pbar-logo{color:var(--gold);font-weight:700;font-size:10px;letter-spacing:0.3px}
+.phome{background:#F0F2F5;height:28px;display:flex;align-items:center;justify-content:center;gap:16px;border-top:0.5px solid var(--bdr);margin-top:auto}
+.hdot{width:4px;height:4px;border-radius:50%;background:var(--sub)}
+
+/* ── MOBILE CONTENT ── */
+.ms{padding:10px 12px;overflow-y:auto;flex:1}
+.mt2{font-size:14px;font-weight:700;margin-bottom:2px;color:var(--navy)}
+.msb{font-size:11px;color:var(--mut);margin-bottom:11px}
+.ml{font-size:10px;font-weight:700;color:var(--mut);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.04em}
+.mi{width:100%;border:0.5px solid var(--bdr);border-radius:6px;padding:8px 10px;font-size:12px;font-family:inherit;background:#fff;color:var(--txt);margin-bottom:8px;outline:none}
+.mi:focus{border-color:var(--navy)}
+.msel{width:100%;border:0.5px solid var(--bdr);border-radius:6px;padding:8px 10px;font-size:12px;font-family:inherit;background:#fff;color:var(--txt);margin-bottom:8px;outline:none;appearance:none}
+.mbtn{width:100%;padding:11px;border-radius:7px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;border:none;margin-top:3px}
+.mbp{background:var(--navy);color:#fff}
+.mbp:hover{background:var(--navy2)}
+.mbs{background:var(--bll);color:var(--blt);border:0.5px solid #B5CFE8}
+.steps{display:flex;gap:3px;padding:8px 12px 0}
+.step{flex:1;height:3px;border-radius:2px}
+.done{background:var(--gold)}
+.act{background:var(--navy)}
+.off{background:var(--bdr)}
+
+/* ── BADGES ── */
+.bx{display:inline-flex;align-items:center;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:600;white-space:nowrap;letter-spacing:0.2px}
+.bb{background:var(--bll);color:var(--blt)}
+.bt{background:var(--tll);color:var(--tlt)}
+.ba{background:var(--aml);color:var(--amt)}
+.br{background:var(--rdl);color:var(--rdt)}
+.bg{background:var(--gnl);color:var(--gnt)}
+.bgr{background:var(--gyl);color:var(--gyt)}
+.bp{background:var(--pul);color:var(--put)}
+.bgold{background:#FDF6E3;color:#7A5A08;border:0.5px solid #E8C96A}
+
+/* ── PANEL (web side) ── */
+.panel{background:var(--surf);border:0.5px solid var(--bdr);border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,43,92,0.06)}
+.ptop{background:var(--navy);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold)}
+.ptit{color:#fff;font-size:13px;font-weight:700;letter-spacing:0.2px}
+.psub{color:rgba(255,255,255,0.5);font-size:10px;margin-top:1px}
+.pbody{padding:14px;background:var(--bg)}
+
+/* ── KPI ROW ── */
+.krow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.kcard{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;padding:11px 12px;border-top:3px solid var(--gold)}
+.klbl{font-size:10px;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;font-weight:600}
+.kval{font-size:20px;font-weight:700;color:var(--navy)}
+.kdelta{font-size:10px;color:var(--teal);margin-top:2px;font-weight:500}
+
+/* ── CARDS ── */
+.card{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;overflow:hidden}
+.ch{padding:9px 12px;border-bottom:0.5px solid var(--bdr);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:space-between;background:var(--bg2);color:var(--navy)}
+.cb{padding:11px 12px}
+
+/* ── TABLE ── */
+.dt{width:100%;border-collapse:collapse;font-size:11px}
+.dt th{padding:6px 8px;text-align:left;font-weight:700;color:var(--navy);border-bottom:1.5px solid var(--gold);font-size:10px;text-transform:uppercase;letter-spacing:0.05em;background:var(--bg2)}
+.dt td{padding:6px 8px;border-bottom:0.5px solid var(--bdr);vertical-align:middle}
+.dt tr:hover td{background:#F0F4FB}
+
+/* ── BUTTONS ── */
+.sbtn{padding:3px 8px;border-radius:4px;border:0.5px solid var(--bdr);background:transparent;font-size:10px;cursor:pointer;font-family:inherit;color:var(--mut)}
+.sbtn:hover{background:var(--bg2)}
+.pbtn{padding:3px 8px;border-radius:4px;border:0.5px solid var(--navy);background:var(--bll);color:var(--navy);font-size:10px;cursor:pointer;font-family:inherit;font-weight:600}
+.tbtn{padding:3px 8px;border-radius:4px;border:0.5px solid var(--teal);background:var(--tll);color:var(--tlt);font-size:10px;cursor:pointer;font-family:inherit;font-weight:600}
+.gbtn{padding:5px 12px;border-radius:4px;border:none;background:var(--gold);color:var(--navy);font-size:11px;cursor:pointer;font-family:inherit;font-weight:700}
+.gbtn:hover{background:var(--gold2)}
+.dbtn{padding:5px 12px;border-radius:4px;border:0.5px solid rgba(255,255,255,0.3);background:transparent;font-size:11px;cursor:pointer;font-family:inherit;color:rgba(255,255,255,0.8)}
+.dbtn:hover{background:rgba(255,255,255,0.1);color:#fff}
+
+/* ── MISC ── */
+.tabs{display:flex;gap:3px;background:var(--bg2);border-radius:6px;padding:3px;margin-bottom:11px}
+.tab{flex:1;padding:5px;border-radius:4px;font-size:11px;font-weight:600;text-align:center;cursor:pointer;border:none;background:transparent;font-family:inherit;color:var(--mut)}
+.tab.on{background:var(--surf);color:var(--navy);border:0.5px solid var(--bdr)}
+.flow{display:flex;align-items:center;padding:7px 0;margin-bottom:11px}
+.fn{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
+.fc{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border:2px solid}
+.fcd{background:var(--tll);border-color:var(--teal);color:var(--tlt)}
+.fca{background:#E8ECF8;border-color:var(--navy);color:var(--navy)}
+.fcf{background:var(--bg2);border-color:var(--bdr);color:var(--sub)}
+.flb{font-size:9px;color:var(--mut);white-space:nowrap}
+.fa{width:20px;height:1px;background:var(--bdr);flex-shrink:0;margin-bottom:14px}
+.pb2{height:4px;background:var(--bdr);border-radius:2px;overflow:hidden;margin:5px 0}
+.pbf{height:100%;border-radius:2px;background:var(--teal)}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--blue);display:inline-block}
+.aibox{background:var(--bll);border-radius:6px;padding:9px;margin:6px 0 8px;border-left:3px solid var(--navy)}
+.ail{font-size:9px;font-weight:700;color:var(--navy);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em}
+.ait{font-size:11px;color:var(--blt);line-height:1.5}
+.sc2{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;padding:9px 10px;margin-bottom:6px;cursor:pointer}
+.sc2:hover{border-color:var(--navy);border-left:3px solid var(--gold)}
+.sct{font-size:12px;font-weight:700;margin-bottom:4px;line-height:1.3;color:var(--navy)}
+.sca{font-size:11px;color:var(--mut)}
+.sbar{display:flex;align-items:center;gap:6px;margin-top:4px}
+.str{flex:1;height:4px;background:var(--bdr);border-radius:2px;overflow:hidden}
+.sf2{height:100%;border-radius:2px}
+.cc{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;overflow:hidden;margin-bottom:6px}
+.cch{display:flex;align-items:center;gap:8px;padding:8px 10px}
+.cdb{width:36px;height:36px;border-radius:6px;background:var(--bll);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.cdd{font-size:13px;font-weight:700;color:var(--navy)}
+.cdm{font-size:9px;color:var(--blue);font-weight:600}
+.ccb{border-top:0.5px solid var(--bdr);padding:7px 10px;background:var(--bg)}
+.sk{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;padding:9px 10px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.skav{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0}
+.arv{background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;overflow:hidden}
+.arh{background:var(--navy);padding:9px 13px;display:flex;align-items:center;gap:6px;border-bottom:2px solid var(--gold)}
+.arht{color:#fff;font-size:11px;font-weight:700}
+.arsc{padding:8px 12px;border-bottom:0.5px solid var(--bdr)}
+.arst{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy);margin-bottom:5px}
+.arit{padding:5px 7px;background:var(--bg);border-radius:4px;margin-bottom:3px;font-size:11px;display:flex;align-items:flex-start;gap:5px}
+.ack{width:13px;height:13px;border-radius:3px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.pfl{background:var(--aml);border-radius:5px;padding:6px 9px;margin-bottom:3px;font-size:11px;border-left:3px solid var(--amber)}
+.uzn{border:1.5px dashed var(--bdr2);border-radius:7px;padding:16px;text-align:center;background:var(--bg2);margin-bottom:8px}
+.sbrw{display:flex;align-items:center;gap:7px;font-size:11px;margin-bottom:5px}
+.sbl{width:60px;color:var(--mut)}
+.strk{flex:1;height:5px;background:var(--bdr);border-radius:2px;overflow:hidden}
+.sfb{height:100%;border-radius:2px}
+.cbrs{display:flex;align-items:flex-end;gap:4px;height:70px;padding:0 2px}
+.cbw{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px}
+.cbr{width:100%;border-radius:3px 3px 0 0}
+.cbl{font-size:9px;color:var(--mut);text-align:center}
+.ih{background:var(--navy);padding:14px;color:#fff;border-bottom:2px solid var(--gold)}
+.ihn{font-size:15px;font-weight:700;margin-bottom:4px}
+.ihm{font-size:11px;color:rgba(255,255,255,0.5);display:flex;gap:9px;flex-wrap:wrap}
+.iha{font-size:22px;font-weight:700;color:var(--gold);margin-top:7px}
+.it2{display:flex;border-bottom:0.5px solid var(--bdr);background:var(--surf)}
+.itb{flex:1;padding:7px 4px;text-align:center;font-size:11px;cursor:pointer;border:none;background:transparent;font-family:inherit;color:var(--mut);font-weight:500;border-bottom:2px solid transparent}
+.itb.on{color:var(--navy);border-bottom-color:var(--gold)}
+.inv-hero-dash{background:var(--navy);padding:14px 16px;border-bottom:2px solid var(--gold)}
+.section-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--navy);margin-bottom:8px;padding-bottom:5px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:6px}
+.section-head::before{content:'';width:3px;height:14px;background:var(--gold);border-radius:2px;display:inline-block}
+
+/* ECCP watermark strip */
+.eccp-strip{height:3px;background:linear-gradient(to right,var(--navy) 60%,var(--gold) 100%);flex-shrink:0}
+
+/* ── ANIMATIONS ── */
+@keyframes pulse{0%,100%{opacity:0.3;transform:scale(0.8)}50%{opacity:1;transform:scale(1.2)}}
+</style>
+
+<!-- ════════════════ TOP NAV ════════════════ -->
+<div class="topbar">
+  <!-- ECCP Logo -->
+  <a class="eccp-logo" href="#">
+    <div class="eccp-seal">
+      <!-- EU-style star circle SVG -->
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+        <!-- 12 EU stars arranged in circle -->
+        <g fill="#38bdf8">
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(30 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(60 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(90 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(120 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(150 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(180 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(210 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(240 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(270 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(300 20 20) scale(0.55) translate(16.3,1)"/>
+          <polygon points="20,5 20.6,7 22.7,7 21,8.3 21.7,10.3 20,9 18.3,10.3 19,8.3 17.3,7 19.4,7" transform="rotate(330 20 20) scale(0.55) translate(16.3,1)"/>
+        </g>
+        <text x="20" y="24" text-anchor="middle" fill="#38bdf8" font-size="7" font-weight="700" font-family="Segoe UI,sans-serif">1PVN</text>
+      </svg>
+    </div>
+    <div class="eccp-wordmark">
+      <span class="eccp-name">1PVN</span>
+      <span class="eccp-tagline">Private Sector Consultation Mechanism</span>
+    </div>
+  </a>
+  <div class="nav-divider"></div>
+  <button class="ntab on"  onclick="go('dash')">Dashboard</button>
+  <button class="ntab"     onclick="go('sub')">Submit</button>
+  <button class="ntab"     onclick="go('pipe')">Pipeline</button>
+  <button class="ntab"     onclick="go('cons')">Consultations</button>
+  <button class="ntab"     onclick="go('min')">AI Minutes</button>
+  <button class="ntab"     onclick="go('prof')">Inv. Profile</button>
+  <button class="ntab"     onclick="go('stak')">Stakeholders</button>
+  <button class="ntab"     onclick="go('forms')">Intake Forms</button>
+  <div class="nright">
+    <span class="nright-btn" style="display:flex;align-items:center;gap:5px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>Eunice Santos</span>
+    <div class="ava">ES</div>
+    <button class="nav-cta">+ New</button>
+  </div>
+</div>
+
+<!-- ════════════════ DASHBOARD ════════════════ -->
+<div class="screen on" id="dash">
+<div class="dual">
+<div>
+<div class="plbl">Mobile — Secretariat Home</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="ms">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;padding-bottom:10px;border-bottom:0.5px solid var(--bdr)">
+    <div>
+      <div style="font-size:10px;color:var(--mut)">Good morning,</div>
+      <div style="font-size:15px;font-weight:700;color:var(--navy)">Eunice S.</div>
+      <div style="font-size:10px;color:var(--gold);font-weight:600">EU-GIZ Investment Facilitator</div>
+    </div>
+    <div class="ava">ES</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px">
+    <div onclick="go('sub')" style="background:var(--navy);color:#fff;border-radius:8px;padding:10px;cursor:pointer;border-bottom:3px solid var(--gold)">
+      <div style="font-size:18px;margin-bottom:2px;color:var(--gold)">+</div>
+      <div style="font-size:11px;font-weight:700">New Submission</div>
+      <div style="font-size:10px;color:rgba(255,255,255,0.5)">Submit opportunity</div>
+    </div>
+    <div onclick="go('min')" style="background:var(--bll);border-radius:8px;padding:10px;cursor:pointer;border:0.5px solid #B5CFE8;border-bottom:3px solid var(--navy)">
+      <div style="font-size:18px;margin-bottom:2px;color:var(--navy)">↑</div>
+      <div style="font-size:11px;font-weight:700;color:var(--navy)">Upload Minutes</div>
+      <div style="font-size:10px;color:var(--blue)">AI processing</div>
+    </div>
+  </div>
+  <div style="font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;display:flex;align-items:center;gap:5px"><span style="width:3px;height:10px;background:var(--gold);border-radius:1px;display:inline-block"></span>Recent Activity</div>
+  <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+    <div style="background:var(--tll);border-radius:5px;padding:6px 8px;border-left:3px solid var(--teal)"><div style="font-size:11px;font-weight:600;color:var(--tlt)">Coconut Hub — Approved</div><div style="font-size:10px;color:var(--teal)">Moved to Pipeline · 2h ago</div></div>
+    <div style="background:var(--aml);border-radius:5px;padding:6px 8px;border-left:3px solid var(--amber)"><div style="font-size:11px;font-weight:600;color:var(--amt)">Forum Minutes — AI Ready</div><div style="font-size:10px;color:var(--amber)">Extraction complete · 3h ago</div></div>
+    <div style="background:var(--bll);border-radius:5px;padding:6px 8px;border-left:3px solid var(--navy)"><div style="font-size:11px;font-weight:600;color:var(--blt)">IFC matched → Solar Farm</div><div style="font-size:10px;color:var(--blue)">Investor match · 5h ago</div></div>
+  </div>
+  <div style="font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;display:flex;align-items:center;gap:5px"><span style="width:3px;height:10px;background:var(--gold);border-radius:1px;display:inline-block"></span>My Tasks (3)</div>
+  <div style="display:flex;flex-direction:column;gap:4px">
+    <div style="display:flex;align-items:center;gap:6px;padding:5px 6px;border-bottom:0.5px solid var(--bdr);border-radius:4px"><div style="width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0"></div><div style="flex:1;font-size:11px">Review Solar Farm pre-feasibility</div><span class="bx br" style="font-size:9px">Overdue</span></div>
+    <div style="display:flex;align-items:center;gap:6px;padding:5px 6px;border-bottom:0.5px solid var(--bdr);border-radius:4px"><div style="width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0"></div><div style="flex:1;font-size:11px">Approve Feb consultation minutes</div><span class="bx ba" style="font-size:9px">Tomorrow</span></div>
+    <div style="display:flex;align-items:center;gap:6px;padding:5px 6px;border-radius:4px"><div style="width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0"></div><div style="flex:1;font-size:11px">Send invite — Cluster 2 forum</div><span class="bx bt" style="font-size:9px">Apr 12</span></div>
+  </div>
+</div>
+<div class="phome"><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div><div class="hdot"></div></div>
+</div></div>
+</div>
+
+<div>
+<div class="wlbl">Web Dashboard — EU-GIZ Investment Facilitation Program</div>
+<div class="panel">
+<div class="ptop">
+  <div><div class="ptit">Private Sector Consultation Mechanism — Investment Pipeline</div><div class="psub">EU-GIZ Partnership · Philippines · 14-month program · April 2026</div></div>
+  <div style="display:flex;gap:6px"><span class="bx bt">System Live</span><span class="bx bgold">Month 1 of 14</span></div>
+</div>
+<div class="pbody">
+  <div class="krow">
+    <div class="kcard"><div class="klbl">Submissions</div><div class="kval">47</div><div class="kdelta">+12 this month</div></div>
+    <div class="kcard"><div class="klbl">Pipeline Value</div><div class="kval">₱2.8B</div><div class="kdelta">6 active stages</div></div>
+    <div class="kcard"><div class="klbl">Investor Matches</div><div class="kval">34</div><div class="kdelta" style="color:var(--gold);font-weight:600">12 above 80%</div></div>
+    <div class="kcard"><div class="klbl">Gates Passed</div><div class="kval">89%</div><div class="kdelta">4 pending LGU</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:10px;margin-bottom:10px">
+    <div class="card">
+      <div class="ch">Pipeline Board <button onclick="go('pipe')" class="sbtn" style="font-size:10px">View all →</button></div>
+      <div class="cb">
+        <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:3px">
+          <div style="min-width:108px">
+            <div style="padding:4px 7px;border-radius:4px 4px 0 0;font-size:9px;font-weight:700;text-transform:uppercase;color:var(--gyt);background:var(--gyl);border:0.5px solid var(--bdr);border-bottom:none;border-top:2px solid var(--gray);display:flex;justify-content:space-between"><span>Intake</span><span style="background:var(--bdr);border-radius:3px;padding:0 4px">8</span></div>
+            <div style="background:#F8F9FC;border:0.5px solid var(--bdr);border-top:none;border-radius:0 0 4px 4px;padding:4px;display:flex;flex-direction:column;gap:3px;min-height:85px">
+              <div style="background:#fff;border:0.5px solid var(--bdr);border-radius:3px;padding:4px 5px;border-left:2px solid var(--gold)"><div style="font-size:10px;font-weight:600;color:var(--navy)">Bamboo Biochar</div><div style="font-size:9px;color:var(--mut)">₱12M</div></div>
+              <div style="background:#fff;border:0.5px solid var(--bdr);border-radius:3px;padding:4px 5px;border-left:2px solid var(--gold)"><div style="font-size:10px;font-weight:600;color:var(--navy)">Seaweed Hub</div><div style="font-size:9px;color:var(--mut)">₱25M</div></div>
+            </div>
+          </div>
+          <div style="min-width:108px">
+            <div style="padding:4px 7px;border-radius:4px 4px 0 0;font-size:9px;font-weight:700;text-transform:uppercase;color:var(--amt);background:var(--aml);border:0.5px solid var(--bdr);border-bottom:none;border-top:2px solid var(--amber);display:flex;justify-content:space-between"><span>Screening</span><span style="background:var(--bdr);border-radius:3px;padding:0 4px">5</span></div>
+            <div style="background:#F8F9FC;border:0.5px solid var(--bdr);border-top:none;border-radius:0 0 4px 4px;padding:4px;display:flex;flex-direction:column;gap:3px;min-height:85px">
+              <div style="background:#fff;border:0.5px solid var(--bdr);border-radius:3px;padding:4px 5px;border-left:2px solid var(--gold)"><div style="font-size:10px;font-weight:600;color:var(--navy)">Cold Chain Davao</div><div style="font-size:9px;color:var(--mut)">₱35M</div></div>
+            </div>
+          </div>
+          <div style="min-width:108px">
+            <div style="padding:4px 7px;border-radius:4px 4px 0 0;font-size:9px;font-weight:700;text-transform:uppercase;color:var(--put);background:var(--pul);border:0.5px solid var(--bdr);border-bottom:none;border-top:2px solid var(--purple);display:flex;justify-content:space-between"><span>Pipeline</span><span style="background:var(--bdr);border-radius:3px;padding:0 4px">4</span></div>
+            <div style="background:#F8F9FC;border:0.5px solid var(--bdr);border-top:none;border-radius:0 0 4px 4px;padding:4px;display:flex;flex-direction:column;gap:3px;min-height:85px">
+              <div style="background:#fff;border:0.5px solid var(--bdr);border-radius:3px;padding:4px 5px;border-left:2px solid var(--gold)"><div style="font-size:10px;font-weight:600;color:var(--navy)">Solar Farm</div><div style="font-size:9px;color:var(--mut)">₱120M</div></div>
+            </div>
+          </div>
+          <div style="min-width:108px">
+            <div style="padding:4px 7px;border-radius:4px 4px 0 0;font-size:9px;font-weight:700;text-transform:uppercase;color:var(--tlt);background:var(--tll);border:0.5px solid var(--bdr);border-bottom:none;border-top:2px solid var(--teal);display:flex;justify-content:space-between"><span>Facilitation</span><span style="background:var(--bdr);border-radius:3px;padding:0 4px">3</span></div>
+            <div style="background:#F8F9FC;border:0.5px solid var(--bdr);border-top:none;border-radius:0 0 4px 4px;padding:4px;display:flex;flex-direction:column;gap:3px;min-height:85px">
+              <div style="background:#fff;border:0.5px solid var(--bdr);border-radius:3px;padding:4px 5px;border-left:2px solid var(--gold)"><div style="font-size:10px;font-weight:600;color:var(--navy)">Carbon Registry</div><div style="font-size:9px;color:var(--mut)">₱8M</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch">Sector Mix</div>
+      <div class="cb">
+        <div class="cbrs">
+          <div class="cbw"><div class="cbr" style="height:62px;background:var(--navy)"></div><div class="cbl">Energy</div></div>
+          <div class="cbw"><div class="cbr" style="height:48px;background:var(--gold)"></div><div class="cbl">Agri</div></div>
+          <div class="cbw"><div class="cbr" style="height:36px;background:var(--teal)"></div><div class="cbl">Env</div></div>
+          <div class="cbw"><div class="cbr" style="height:24px;background:var(--amber)"></div><div class="cbl">Logistics</div></div>
+          <div class="cbw"><div class="cbr" style="height:14px;background:var(--purple)"></div><div class="cbl">Blue</div></div>
+        </div>
+        <div style="margin-top:9px;display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:var(--mut)">Cluster 1 — Policy</span><span class="bx bb">8</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:var(--mut)">Cluster 2 — Investment</span><span class="bx bt">22</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:var(--mut)">Cluster 3 — Energy</span><span class="bx bp">17</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+    <div class="card"><div class="ch">Upcoming Consultations</div><div class="cb">
+      <div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:0.5px solid var(--bdr)">
+        <div class="cdb"><div class="cdd">12</div><div class="cdm">APR</div></div>
+        <div><div style="font-size:11px;font-weight:600;color:var(--navy)">Cluster 1 Policy Dialogue</div><div style="font-size:10px;color:var(--mut)">GIZ, UNDP · 24 registered</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
+        <div class="cdb" style="background:var(--tll)"><div class="cdd">18</div><div class="cdm" style="color:var(--teal)">APR</div></div>
+        <div><div style="font-size:11px;font-weight:600;color:var(--navy)">Investment Mapping Forum</div><div style="font-size:10px;color:var(--mut)">IFC, GGGI · 38 registered</div></div>
+      </div>
+    </div></div>
+    <div class="card"><div class="ch">AI Minutes Queue</div><div class="cb" style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:11px">March WG Minutes</div><span class="bx bt">Approved</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:11px">Forum Minutes Apr 5</div><span class="bx ba">Review</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:11px">Bilateral — IFC</div><span class="bx bb">Processing</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:11px">LGU Quezon Visit</div><span class="bx bgr">Uploading</span></div>
+    </div></div>
+    <div class="card"><div class="ch">Action Items</div><div class="cb" style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><div style="width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0"></div><div style="flex:1">DTI co-funding study</div><span style="font-size:10px;color:var(--red)">Overdue</span></div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><div style="width:5px;height:5px;border-radius:50%;background:var(--amber);flex-shrink:0"></div><div style="flex:1">LGU endorsement — Quezon</div><span style="font-size:10px;color:var(--amber)">Apr 15</span></div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><div style="width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0"></div><div style="flex:1">IFC intro meeting setup</div><span style="font-size:10px;color:var(--teal)">Apr 18</span></div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><div style="width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0"></div><div style="flex:1">Policy brief — Cluster 1</div><span style="font-size:10px;color:var(--teal)">Apr 22</span></div>
+    </div></div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ SUBMIT ════════════════ -->
+<div class="screen" id="sub">
+<div class="dual">
+<div><div class="plbl">Mobile — Submit Opportunity</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="steps"><div class="step done"></div><div class="step done"></div><div class="step act"></div><div class="step off"></div><div class="step off"></div><div class="step off"></div></div>
+<div class="ms">
+  <div style="font-size:10px;color:var(--mut);margin-bottom:6px">Step 3 of 6 — Project Basics</div>
+  <div class="mt2">Project Details</div><div class="msb">Submit your investment opportunity</div>
+  <div class="ml">Project Name</div><input class="mi" value="Quezon Coconut Industrial Hub">
+  <div class="ml">Sector</div><select class="msel"><option selected>Agri-Processing</option><option>Renewable Energy</option><option>Blue Economy</option><option>Environment</option></select>
+  <div class="ml">Cluster</div><select class="msel"><option>Cluster 1 — Policy</option><option selected>Cluster 2 — Sustainable Investments</option><option>Cluster 3 — Energy</option></select>
+  <div class="ml">Project Summary</div><textarea class="mi" rows="3" style="resize:none">Vertically integrated coconut processing targeting coconut water, copra oil, and biochar for export. LGU-endorsed, BOI-registered...</textarea>
+  <div class="aibox">
+    <div class="ail">AI Assist — Gemini 2.0 Flash</div>
+    <div class="ait">Emphasize (1) coconut value chain integration, (2) export market linkage, (3) LGU and BOI partnership for a stronger submission.</div>
+    <button style="margin-top:5px;padding:3px 9px;border-radius:4px;border:0.5px solid var(--navy);background:transparent;font-size:10px;font-weight:600;cursor:pointer;color:var(--navy);font-family:inherit">Use suggestion</button>
+  </div>
+  <button class="mbtn mbp">Continue →</button>
+  <button class="mbtn mbs" style="margin-top:5px">← Back</button>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Submission Queue</div>
+<div class="panel">
+<div class="ptop"><div class="ptit">Submission Queue</div><div style="display:flex;gap:6px"><span class="bx br">8 New</span><span class="bx ba">3 Needs Info</span></div></div>
+<div class="pbody">
+  <div class="card" style="padding:11px;margin-bottom:11px">
+    <div class="section-head">Submission → Pipeline Flow</div>
+    <div class="flow">
+      <div class="fn"><div class="fc fcd">1</div><div class="flb">Submit</div></div><div class="fa"></div>
+      <div class="fn"><div class="fc fcd">2</div><div class="flb">Review</div></div><div class="fa"></div>
+      <div class="fn"><div class="fc fca">3</div><div class="flb">Convert</div></div><div class="fa"></div>
+      <div class="fn"><div class="fc fcf">4</div><div class="flb">Screen</div></div><div class="fa"></div>
+      <div class="fn"><div class="fc fcf">5</div><div class="flb">Match</div></div><div class="fa"></div>
+      <div class="fn"><div class="fc fcf">6</div><div class="flb">Close</div></div>
+    </div>
+  </div>
+  <div class="card" style="overflow:hidden"><div style="overflow-x:auto">
+    <table class="dt" style="table-layout:fixed;width:100%">
+      <colgroup><col style="width:85px"><col style="width:160px"><col style="width:120px"><col style="width:80px"><col style="width:72px"><col style="width:110px"></colgroup>
+      <thead><tr><th>Ref #</th><th>Organization</th><th>Project</th><th>Type</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody>
+        <tr><td style="font-family:monospace;font-size:9px;color:var(--mut)">1PVN-0047</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Quezon Agri Corp</div><div style="font-size:10px;color:var(--mut)">Ana Reyes · ana@qac.ph</div></td><td style="font-size:11px">Coconut Industrial Hub</td><td><span class="bx bt">Opportunity</span></td><td><span class="bx br">New</span></td><td><div style="display:flex;gap:3px"><button style="padding:3px 7px;border-radius:3px;border:none;background:var(--navy);color:#fff;font-size:10px;cursor:pointer;font-family:inherit">Review</button><button class="sbtn">Convert</button></div></td></tr>
+        <tr><td style="font-family:monospace;font-size:9px;color:var(--mut)">1PVN-0046</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">SolarPH Ventures</div><div style="font-size:10px;color:var(--mut)">Ben Cruz · solar.ph</div></td><td style="font-size:11px">Ilocos Solar Farm</td><td><span class="bx bt">Opportunity</span></td><td><span class="bx ba">In Review</span></td><td><div style="display:flex;gap:3px"><button class="sbtn">Info</button><button class="tbtn">Approve</button></div></td></tr>
+        <tr><td style="font-family:monospace;font-size:9px;color:var(--mut)">1PVN-0045</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">ADB Philippines</div><div style="font-size:10px;color:var(--mut)">m.santos@adb.org</div></td><td style="font-size:11px">Investor Registration</td><td><span class="bx bb">Investor</span></td><td><span class="bx bt">Approved</span></td><td><button class="sbtn">View</button></td></tr>
+        <tr><td style="font-family:monospace;font-size:9px;color:var(--mut)">1PVN-0044</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Davao Cold Chain</div><div style="font-size:10px;color:var(--mut)">jt@dcc.ph</div></td><td style="font-size:11px">Cold Chain Network</td><td><span class="bx bt">Opportunity</span></td><td><span class="bx bgr">Needs Info</span></td><td><button class="sbtn" style="color:var(--amt)">Follow up</button></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ PIPELINE ════════════════ -->
+<div class="screen" id="pipe">
+<div class="dual">
+<div><div class="plbl">Mobile — Pipeline</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="ms">
+  <div class="tabs"><button class="tab on">All (47)</button><button class="tab">Mine (8)</button><button class="tab">Flagged</button></div>
+  <div class="sc2" onclick="go('prof')">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><div><div class="sct">Coconut Industrial Hub</div><div class="sca">Quezon Province · Agri-Processing</div></div><span class="bx bp">Pipeline</span></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:700;color:var(--teal)">₱50M</div><span class="bx bt">Cluster 2</span></div>
+    <div class="sbar"><div style="font-size:10px;color:var(--mut);width:32px">Score</div><div class="str"><div class="sf2" style="width:82%;background:var(--teal)"></div></div><div style="font-size:10px;font-weight:700;color:var(--teal)">82</div></div>
+  </div>
+  <div class="sc2">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><div><div class="sct">Solar Farm Cluster</div><div class="sca">Ilocos Norte · Renewable Energy</div></div><span class="bx bt">Facilitation</span></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:700;color:var(--teal)">₱120M</div><span class="bx bp">Cluster 3</span></div>
+    <div class="sbar"><div style="font-size:10px;color:var(--mut);width:32px">Score</div><div class="str"><div class="sf2" style="width:91%;background:var(--teal)"></div></div><div style="font-size:10px;font-weight:700;color:var(--teal)">91</div></div>
+  </div>
+  <div class="sc2">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><div><div class="sct">Cold Chain Davao</div><div class="sca">Davao City · Logistics</div></div><span class="bx ba">Screening</span></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:700;color:var(--amber)">₱35M</div><span class="bx bb">Cluster 2</span></div>
+    <div class="sbar"><div style="font-size:10px;color:var(--mut);width:32px">Score</div><div class="str"><div class="sf2" style="width:74%;background:var(--amber)"></div></div><div style="font-size:10px;font-weight:700;color:var(--amber)">74</div></div>
+  </div>
+  <div class="sc2" style="border-left:3px solid var(--purple)">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px"><div><div class="sct">TexRev Circular Textile</div><div class="sca">Taytay, Rizal · Textile Recycling</div></div><span class="bx bb">Development</span></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-size:13px;font-weight:700;color:var(--navy)">$10–15M</div><span class="bx bt">Cluster 2</span></div>
+    <div class="sbar"><div style="font-size:10px;color:var(--mut);width:32px">Score</div><div class="str"><div class="sf2" style="width:80%;background:var(--navy)"></div></div><div style="font-size:10px;font-weight:700;color:var(--navy)">80</div></div>
+  </div>
+  <button class="mbtn mbp" onclick="go('prof')" style="margin-top:8px">View Investment Profile →</button>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Pipeline Table + Scoring Engine</div>
+<div class="panel">
+<div class="ptop"><div class="ptit">Investment Pipeline Board</div><div style="display:flex;gap:5px"><button class="dbtn">Kanban</button><button class="gbtn">Table</button></div></div>
+<div class="pbody">
+  <div class="card" style="overflow:hidden;margin-bottom:11px"><div style="overflow-x:auto">
+    <table class="dt" style="table-layout:fixed;width:100%">
+      <colgroup><col style="width:148px"><col style="width:72px"><col style="width:76px"><col style="width:62px"><col style="width:82px"><col style="width:48px"><col style="width:70px"><col style="width:65px"></colgroup>
+      <thead><tr><th>Opportunity</th><th>Sector</th><th>Value</th><th>Score</th><th>Stage</th><th>Risk</th><th>Owner</th><th>Actions</th></tr></thead>
+      <tbody>
+        <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Coconut Industrial Hub</div><div style="font-size:10px;color:var(--mut)">Quezon · Cluster 2</div></td><td><span class="bx bt">Agri</span></td><td style="font-size:11px;font-weight:700;color:var(--navy)">₱50M</td><td><div style="display:flex;align-items:center;gap:3px"><div style="width:24px;height:4px;border-radius:2px;background:var(--bdr);overflow:hidden"><div style="width:82%;height:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:700;color:var(--teal)">82</span></div></td><td><span class="bx bp">Pipeline</span></td><td><span class="bx bt">Low</span></td><td style="font-size:11px">E. Santos</td><td><button class="pbtn" onclick="go('prof')">View →</button></td></tr>
+        <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Solar Farm Cluster</div><div style="font-size:10px;color:var(--mut)">Ilocos · Cluster 3</div></td><td><span class="bx bb">Energy</span></td><td style="font-size:11px;font-weight:700;color:var(--navy)">₱120M</td><td><div style="display:flex;align-items:center;gap:3px"><div style="width:24px;height:4px;border-radius:2px;background:var(--bdr);overflow:hidden"><div style="width:91%;height:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:700;color:var(--teal)">91</span></div></td><td><span class="bx bt">Facilitation</span></td><td><span class="bx bt">Low</span></td><td style="font-size:11px">B. Lim</td><td><button class="sbtn">View →</button></td></tr>
+        <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Cold Chain Davao</div><div style="font-size:10px;color:var(--mut)">Davao · Cluster 2</div></td><td><span class="bx ba">Logistics</span></td><td style="font-size:11px;font-weight:700;color:var(--navy)">₱35M</td><td><div style="display:flex;align-items:center;gap:3px"><div style="width:24px;height:4px;border-radius:2px;background:var(--bdr);overflow:hidden"><div style="width:74%;height:100%;background:var(--amber)"></div></div><span style="font-size:10px;font-weight:700;color:var(--amber)">74</span></div></td><td><span class="bx ba">Screening</span></td><td><span class="bx ba">Med</span></td><td style="font-size:11px">E. Santos</td><td><button class="sbtn">View →</button></td></tr>
+        <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Carbon Registry PH</div><div style="font-size:10px;color:var(--mut)">Palawan · Cluster 2</div></td><td><span class="bx bg">ESG</span></td><td style="font-size:11px;font-weight:700;color:var(--navy)">₱8M</td><td><div style="display:flex;align-items:center;gap:3px"><div style="width:24px;height:4px;border-radius:2px;background:var(--bdr);overflow:hidden"><div style="width:88%;height:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:700;color:var(--teal)">88</span></div></td><td><span class="bx bt">Facilitation</span></td><td><span class="bx bt">Low</span></td><td style="font-size:11px">M. Garcia</td><td><button class="sbtn">View →</button></td></tr>
+        <tr style="background:var(--pul)"><td><div style="font-size:11px;font-weight:600;color:var(--navy)">TexRev Circular Textile</div><div style="font-size:10px;color:var(--mut)">Taytay, Rizal · Cluster 2</div></td><td><span class="bx bp">Textile</span></td><td style="font-size:11px;font-weight:700;color:var(--navy)">$10–15M</td><td><div style="display:flex;align-items:center;gap:3px"><div style="width:24px;height:4px;border-radius:2px;background:var(--bdr);overflow:hidden"><div style="width:80%;height:100%;background:var(--navy)"></div></div><span style="font-size:10px;font-weight:700;color:var(--navy)">80</span></div></td><td><span class="bx bb">Development</span></td><td><span class="bx ba">Med</span></td><td style="font-size:11px">E. Santos</td><td><button class="sbtn">View →</button></td></tr>
+      </tbody>
+    </table>
+  </div></div>
+  <div class="card" style="padding:12px">
+    <div class="section-head">Screening Score — Coconut Industrial Hub</div>
+    <div style="display:grid;grid-template-columns:70px 1fr;gap:14px;align-items:center;margin-top:8px">
+      <div style="text-align:center">
+        <div style="font-size:26px;font-weight:700;color:var(--navy)">82</div>
+        <div style="font-size:10px;color:var(--mut)">Composite</div>
+        <span class="bx bgold" style="margin-top:4px">Pipeline</span>
+      </div>
+      <div>
+        <div class="sbrw"><div class="sbl">Feasibility</div><div class="strk"><div class="sfb" style="width:80%;background:var(--navy)"></div></div><span style="font-size:10px;font-weight:600;color:var(--navy);width:22px;text-align:right">4/5</span></div>
+        <div class="sbrw"><div class="sbl">Impact</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:22px;text-align:right">5/5</span></div>
+        <div class="sbrw"><div class="sbl">Readiness</div><div class="strk"><div class="sfb" style="width:60%;background:var(--amber)"></div></div><span style="font-size:10px;font-weight:600;color:var(--amber);width:22px;text-align:right">3/5</span></div>
+        <div class="sbrw"><div class="sbl">LGU Bonus</div><div class="strk"><div class="sfb" style="width:100%;background:var(--gold)"></div></div><span style="font-size:10px;font-weight:600;color:var(--amber);width:22px;text-align:right">+5</span></div>
+        <div class="sbrw"><div class="sbl">DFI Bonus</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:22px;text-align:right">+5</span></div>
+        <div class="sbrw"><div class="sbl">Risk Adj.</div><div class="strk"><div class="sfb" style="width:44%;background:var(--red)"></div></div><span style="font-size:10px;font-weight:600;color:var(--red);width:22px;text-align:right">-4</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- GATE REQUIREMENTS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+    <div class="card" style="padding:11px">
+      <div class="section-head">Gate Check: Pipeline → Matchmaking</div>
+      <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px"><div style="width:14px;height:14px;border-radius:3px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div>Composite score >= 65</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px"><div style="width:14px;height:14px;border-radius:3px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div>Pre-feasibility complete</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px"><div style="width:14px;height:14px;border-radius:3px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div>At least 1 stakeholder linked</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px"><div style="width:14px;height:14px;border-radius:3px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div>Concept note uploaded</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--amber)"><div style="width:14px;height:14px;border-radius:3px;background:var(--aml);border:0.5px solid var(--amber);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;font-weight:700;color:var(--amber)">!</div>LGU endorsement letter</div>
+      </div>
+      <div style="margin-top:8px;padding:6px 8px;background:var(--aml);border-radius:5px;border-left:3px solid var(--amber);font-size:10px;color:var(--amt)"><b>4 of 5 gates passed</b> — LGU endorsement pending (due May 15)</div>
+    </div>
+    <div class="card" style="padding:11px">
+      <div class="section-head">Matching Algorithm — Top Investor</div>
+      <div style="display:flex;align-items:center;gap:8px;margin:6px 0 8px"><div style="font-size:22px;font-weight:700;color:var(--navy)">87%</div><div><div style="font-size:11px;font-weight:600;color:var(--navy)">IFC Philippines</div><div style="font-size:10px;color:var(--mut)">Development Finance · ₱30M–₱200M</div></div></div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <div class="sbrw"><div class="sbl" style="width:68px">Sector</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:28px;text-align:right">1.00</span></div>
+        <div class="sbrw"><div class="sbl" style="width:68px">Ticket Fit</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:28px;text-align:right">1.00</span></div>
+        <div class="sbrw"><div class="sbl" style="width:68px">Cluster</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:28px;text-align:right">1.00</span></div>
+        <div class="sbrw"><div class="sbl" style="width:68px">Stage Pref</div><div class="strk"><div class="sfb" style="width:50%;background:var(--amber)"></div></div><span style="font-size:10px;font-weight:600;color:var(--amber);width:28px;text-align:right">0.50</span></div>
+        <div class="sbrw"><div class="sbl" style="width:68px">Geography</div><div class="strk"><div class="sfb" style="width:50%;background:var(--amber)"></div></div><span style="font-size:10px;font-weight:600;color:var(--amber);width:28px;text-align:right">0.50</span></div>
+        <div class="sbrw"><div class="sbl" style="width:68px">Score Bonus</div><div class="strk"><div class="sfb" style="width:100%;background:var(--teal)"></div></div><span style="font-size:10px;font-weight:600;color:var(--teal);width:28px;text-align:right">1.00</span></div>
+      </div>
+      <div style="margin-top:6px;font-size:10px;color:var(--mut)">Weights: Sector 30% · Ticket 25% · Cluster 20% · Stage 10% · Geo 10% · Bonus 5%</div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ AI MINUTES ════════════════ -->
+<div class="screen" id="min">
+<div class="dual">
+<div><div class="plbl">Mobile — Upload Minutes</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="ms">
+  <div class="mt2">Upload Meeting Minutes</div><div class="msb">AI extracts decisions, actions, and insights automatically</div>
+  <div class="uzn">
+    <div style="width:28px;height:28px;background:var(--bll);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;border:0.5px solid var(--bdr)"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v7M5 4l2-2 2 2M2 10v1a2 2 0 002 2h6a2 2 0 002-2v-1" stroke="#002B5C" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+    <div style="font-size:11px;font-weight:600;color:var(--navy)">Drop PDF or DOCX here</div>
+    <div style="font-size:10px;color:var(--mut);margin-top:2px">tap to browse files</div>
+  </div>
+  <div style="background:var(--surf);border:0.5px solid var(--bdr);border-radius:7px;padding:9px;margin-bottom:8px">
+    <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px">
+      <div style="width:24px;height:24px;border-radius:4px;background:var(--rdl);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="10" height="10" rx="2" stroke="#C62828" stroke-width="1"/><path d="M3 4h6M3 6h6M3 8h4" stroke="#C62828" stroke-width="0.8" stroke-linecap="round"/></svg></div>
+      <div style="flex:1"><div style="font-size:11px;font-weight:600">Forum_Minutes_Apr5.pdf</div><div style="font-size:10px;color:var(--mut)">2.4 MB</div></div>
+      <span class="bx ba">Processing</span>
+    </div>
+    <div class="pb2"><div class="pbf" style="width:65%"></div></div>
+    <div style="font-size:10px;color:var(--mut)">AI extracting text... 65%</div>
+  </div>
+  <div style="background:var(--tll);border:0.5px solid #9FE1CB;border-radius:7px;padding:9px;margin-bottom:8px">
+    <div style="display:flex;align-items:center;gap:7px">
+      <div style="width:24px;height:24px;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 5l3 3 5-5" stroke="#1B7A5A" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <div><div style="font-size:11px;font-weight:600;color:var(--tlt)">March WG Minutes.pdf</div><div style="font-size:10px;color:var(--teal)">Approved · 8 insights · 5 actions</div></div>
+    </div>
+  </div>
+  <div class="aibox">
+    <div class="ail">AI Processing — Gemini 2.0 Flash</div>
+    <div class="ait">Extracting decisions, action items, policy flags, and participant insights from Forum_Minutes_Apr5.pdf...</div>
+    <div style="display:flex;gap:3px;align-items:center;margin-top:5px">
+      <span class="dot" style="animation:pulse 1s infinite;background:var(--navy)"></span>
+      <span class="dot" style="animation:pulse 1s 0.2s infinite;background:var(--navy)"></span>
+      <span class="dot" style="animation:pulse 1s 0.4s infinite;background:var(--navy)"></span>
+      <span style="font-size:10px;color:var(--navy);margin-left:4px">Processing...</span>
+    </div>
+  </div>
+  <button class="mbtn mbp">Review When Ready →</button>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — AI Minutes Side-by-Side Review</div>
+<div class="panel">
+<div class="ptop">
+  <div><div class="ptit">Minutes Review — Forum Minutes Apr 5</div><div class="psub">AI extraction complete · Gemini 2.0 Flash · 89% confidence</div></div>
+  <div style="display:flex;gap:6px"><button class="dbtn">Save Draft</button><button class="gbtn">Approve Minutes</button></div>
+</div>
+<div class="pbody">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:10px">
+    <div class="card" style="overflow:hidden">
+      <div style="padding:7px 11px;border-bottom:0.5px solid var(--bdr);font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.04em;background:var(--bg2)">Original Document</div>
+      <div style="padding:10px 11px;font-size:11px;line-height:1.7;max-height:340px;overflow-y:auto">
+        <div style="font-weight:700;margin-bottom:5px;color:var(--navy)">Investment Facilitation Program</div>
+        <div style="font-weight:600;margin-bottom:8px">Forum Minutes — April 5, 2026 | 9:00 AM – 12:00 PM</div>
+        <div style="margin-bottom:5px"><strong>Attendees:</strong> Ana Reyes (DTI), Juan dela Cruz (IFC), Maria Santos (GIZ), Peter Bautista (GGGI), Rose Lim (BOI), eight EU Chamber representatives</div>
+        <div style="margin-bottom:5px"><strong>Agenda:</strong><br>1. Investment mapping update<br>2. Cluster 2 project screening<br>3. Policy gaps — regulatory environment<br>4. LGU engagement strategy</div>
+        <div style="margin-bottom:5px"><strong>Key Discussion:</strong> DTI presented updated investment mapping showing 22 priority projects. IFC confirmed co-financing interest above ₱30M. GIZ flagged zoning conflicts as a significant regulatory barrier requiring policy intervention...</div>
+        <div><strong>Decisions:</strong><br>1. DTI to co-fund pre-feasibility study<br>2. LGU endorsement deadline: May 15<br>3. IFC intro meeting: April 18</div>
+      </div>
+    </div>
+    <div class="arv">
+      <div class="arh"><div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><div class="arht">AI Extracted Output — edit before approving</div></div>
+      <div class="arsc">
+        <div class="arst">Summary</div>
+        <div style="font-size:11px;line-height:1.6;padding:7px;background:var(--bg);border-radius:4px;border-left:2px solid var(--gold)">April 5 forum reviewed 22 Cluster 2 projects. IFC confirmed co-financing above ₱30M. GIZ raised zoning regulatory barriers. Three decisions made on pre-feasibility, LGU endorsements, and investor introductions.</div>
+      </div>
+      <div class="arsc">
+        <div class="arst">Decisions (3)</div>
+        <div class="arit"><div class="ack"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div><div>DTI to co-fund pre-feasibility study for Coconut Hub</div></div>
+        <div class="arit"><div class="ack"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div><div>LGU endorsement deadline: May 15, 2026</div></div>
+        <div class="arit"><div class="ack"><svg width="7" height="7" viewBox="0 0 7 7"><path d="M1 3.5l1.5 1.5 3-3" stroke="#1B7A5A" stroke-width="1.2" fill="none"/></svg></div><div>IFC intro meeting confirmed April 18</div></div>
+      </div>
+      <div class="arsc">
+        <div class="arst">Action Items (3)</div>
+        <div class="arit" style="flex-direction:column;gap:3px"><div style="font-size:11px;font-weight:600">Pre-feasibility study initiation</div><div style="display:flex;gap:4px"><span class="bx bb">DTI · Ana Reyes</span><span class="bx ba">Apr 30</span></div></div>
+        <div class="arit" style="flex-direction:column;gap:3px"><div style="font-size:11px;font-weight:600">LGU endorsement — Quezon Province</div><div style="display:flex;gap:4px"><span class="bx bb">BOI · Rose Lim</span><span class="bx ba">May 15</span></div></div>
+      </div>
+      <div class="arsc" style="border-bottom:none">
+        <div class="arst">Policy Flag (1)</div>
+        <div class="pfl">
+          <div style="font-size:11px;font-weight:700;color:var(--amt);margin-bottom:2px">Zoning conflict — regulatory barrier</div>
+          <div style="font-size:11px;color:var(--amt)">GIZ flagged LGU zoning inconsistencies blocking agri-processing. Policy note required.</div>
+          <button style="margin-top:4px;padding:3px 8px;border-radius:3px;border:0.5px solid var(--amber);background:transparent;font-size:10px;font-weight:600;cursor:pointer;color:var(--amt);font-family:inherit">Create Policy Note →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ INVESTMENT PROFILE ════════════════ -->
+<div class="screen" id="prof">
+<div class="dual">
+<div><div class="plbl">Mobile — Investment Profile</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="ih">
+  <div style="display:flex;gap:5px;margin-bottom:6px"><span class="bx bt">Cluster 2</span><span class="bx bp">Pipeline</span></div>
+  <div class="ihn">Quezon Coconut Industrial Hub</div>
+  <div class="ihm"><span>Quezon Province</span><span>Agri-Processing</span><span>DTI Lead</span></div>
+  <div class="iha">₱50,000,000</div>
+</div>
+<div class="it2"><button class="itb on">Overview</button><button class="itb">Scoring</button><button class="itb">Investors</button><button class="itb">Docs</button></div>
+<div class="ms">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+    <div style="background:var(--bg2);border-radius:6px;padding:7px;border-top:2px solid var(--gold)"><div style="font-size:10px;color:var(--mut);margin-bottom:2px">Investment</div><div style="font-size:13px;font-weight:700;color:var(--navy)">₱50M</div></div>
+    <div style="background:var(--bg2);border-radius:6px;padding:7px;border-top:2px solid var(--gold)"><div style="font-size:10px;color:var(--mut);margin-bottom:2px">Jobs</div><div style="font-size:13px;font-weight:700;color:var(--navy)">850+</div></div>
+    <div style="background:var(--bg2);border-radius:6px;padding:7px;border-top:2px solid var(--gold)"><div style="font-size:10px;color:var(--mut);margin-bottom:2px">Timeline</div><div style="font-size:13px;font-weight:700;color:var(--navy)">3–5 years</div></div>
+    <div style="background:var(--bg2);border-radius:6px;padding:7px;border-top:2px solid var(--gold)"><div style="font-size:10px;color:var(--mut);margin-bottom:2px">Export</div><div style="font-size:13px;font-weight:700;color:var(--teal)">High</div></div>
+  </div>
+  <div style="font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">Summary</div>
+  <div style="font-size:12px;line-height:1.6;margin-bottom:10px">Vertically integrated coconut processing facility targeting coconut water, copra oil, and biochar. LGU-endorsed. BOI registered. Pre-feasibility co-funded by DTI.</div>
+  <div style="font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;display:flex;align-items:center;gap:5px"><span style="width:3px;height:10px;background:var(--gold);border-radius:1px;display:inline-block"></span>Investor Matches (6-Factor)</div>
+  <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+    <div style="background:var(--bg2);border-radius:6px;padding:7px;border-left:3px solid var(--gold)">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px"><div style="width:26px;height:26px;border-radius:4px;background:var(--bll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--blt);border:0.5px solid var(--bdr)">IFC</div><div><div style="font-size:11px;font-weight:600;color:var(--navy)">IFC Philippines</div><div style="font-size:10px;color:var(--mut)">DFI · ₱30M–₱200M</div></div><span class="bx bt" style="margin-left:auto">87%</span></div>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px">
+        <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--tlt)">SEC</div><div style="font-size:9px;font-weight:700;color:var(--tlt)">1.0</div></div>
+        <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--tlt)">TKT</div><div style="font-size:9px;font-weight:700;color:var(--tlt)">1.0</div></div>
+        <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--tlt)">CLU</div><div style="font-size:9px;font-weight:700;color:var(--tlt)">1.0</div></div>
+        <div style="background:var(--aml);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--amt)">STG</div><div style="font-size:9px;font-weight:700;color:var(--amt)">0.5</div></div>
+        <div style="background:var(--aml);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--amt)">GEO</div><div style="font-size:9px;font-weight:700;color:var(--amt)">0.5</div></div>
+        <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center"><div style="font-size:7px;color:var(--tlt)">SCR</div><div style="font-size:9px;font-weight:700;color:var(--tlt)">1.0</div></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:7px;padding:4px 7px"><div style="width:26px;height:26px;border-radius:4px;background:var(--pul);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--put);border:0.5px solid var(--bdr)">GGI</div><div><div style="font-size:11px;font-weight:600;color:var(--navy)">GGGI</div><div style="font-size:10px;color:var(--mut)">Dev. Partner · ₱10M–₱80M</div></div><span class="bx ba" style="margin-left:auto">74%</span></div>
+    <div style="display:flex;align-items:center;gap:7px;padding:4px 7px"><div style="width:26px;height:26px;border-radius:4px;background:var(--bll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--blt);border:0.5px solid var(--bdr)">ADB</div><div><div style="font-size:11px;font-weight:600;color:var(--navy)">ADB Philippines</div><div style="font-size:10px;color:var(--mut)">Multilateral · ₱50M+</div></div><span class="bx ba" style="margin-left:auto">71%</span></div>
+  </div>
+  <button class="mbtn mbp">Advance to Matchmaking →</button>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Investment Profile Detail</div>
+<div class="panel">
+<div class="inv-hero-dash">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between">
+    <div>
+      <div style="display:flex;gap:5px;margin-bottom:7px"><span class="bx bt">Cluster 2</span><span class="bx bp">Pipeline Stage</span><span class="bx bgold">Score: 82</span></div>
+      <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:4px;letter-spacing:-0.3px">Quezon Coconut Industrial Hub</div>
+      <div style="color:rgba(255,255,255,0.5);font-size:11px;display:flex;gap:10px"><span>Quezon Province</span><span>Agri-Processing</span><span>Lead: DTI</span></div>
+      <div style="color:var(--gold);font-size:22px;font-weight:700;margin-top:8px;letter-spacing:-0.5px">₱50,000,000</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px"><button class="dbtn">Edit</button><button class="gbtn">Advance Stage →</button></div>
+  </div>
+</div>
+<div class="pbody">
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:11px">
+    <div class="kcard"><div class="klbl">Investment</div><div class="kval" style="font-size:15px;color:var(--teal)">₱50M</div></div>
+    <div class="kcard"><div class="klbl">Jobs Created</div><div class="kval" style="font-size:15px">850+</div></div>
+    <div class="kcard"><div class="klbl">Timeline</div><div class="kval" style="font-size:15px">3–5 yr</div></div>
+    <div class="kcard"><div class="klbl">Export</div><div class="kval" style="font-size:15px;color:var(--teal)">High</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card" style="padding:11px">
+        <div class="section-head">Project Summary</div>
+        <div style="font-size:12px;line-height:1.7;margin-top:6px">Vertically integrated coconut processing facility targeting coconut water extraction, copra oil refining, and biochar production from waste streams. Quezon Province with full LGU endorsement. BOI-registered with export incentives. DTI co-funding pre-feasibility. Target: 850 direct jobs, ₱200M annual revenue by Year 3.</div>
+      </div>
+      <div class="card" style="padding:11px">
+        <div class="section-head">Risk Register</div>
+        <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px"><span class="bx bt">Low</span><div style="flex:1">LGU endorsement secured</div><span style="color:var(--mut);font-size:10px">Score 4</span></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px"><span class="bx ba">Med</span><div style="flex:1">Coconut supply variability</div><span style="color:var(--mut);font-size:10px">Score 9</span></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:11px"><span class="bx bt">Low</span><div style="flex:1">Regulatory compliance</div><span style="color:var(--mut);font-size:10px">Score 3</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="overflow:hidden">
+      <div class="ch">Investor Matches — AI Engine <span class="bx bgold" style="font-size:9px">6-Factor Algorithm</span></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:var(--bg);border-radius:6px;padding:8px;border:0.5px solid var(--bdr);border-left:3px solid var(--gold)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div style="font-size:12px;font-weight:700;color:var(--navy)">IFC Philippines</div><span class="bx bt">87% match</span></div>
+          <div style="font-size:10px;color:var(--mut);margin-bottom:5px">DFI · ₱30M–₱200M · Cluster 2+3</div>
+          <div style="display:flex;gap:3px;margin-bottom:5px"><span class="bx bt" style="font-size:9px">Agri</span><span class="bx bb" style="font-size:9px">Energy</span><span class="bx bg" style="font-size:9px">ESG</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">
+            <div style="background:var(--tll);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--tlt);text-transform:uppercase">Sector</div><div style="font-size:11px;font-weight:700;color:var(--tlt)">1.0</div></div>
+            <div style="background:var(--tll);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--tlt);text-transform:uppercase">Ticket</div><div style="font-size:11px;font-weight:700;color:var(--tlt)">1.0</div></div>
+            <div style="background:var(--tll);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--tlt);text-transform:uppercase">Cluster</div><div style="font-size:11px;font-weight:700;color:var(--tlt)">1.0</div></div>
+            <div style="background:var(--aml);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--amt);text-transform:uppercase">Stage</div><div style="font-size:11px;font-weight:700;color:var(--amt)">0.5</div></div>
+            <div style="background:var(--aml);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--amt);text-transform:uppercase">Geo</div><div style="font-size:11px;font-weight:700;color:var(--amt)">0.5</div></div>
+            <div style="background:var(--tll);border-radius:3px;padding:3px 5px;text-align:center"><div style="font-size:8px;color:var(--tlt);text-transform:uppercase">Score</div><div style="font-size:11px;font-weight:700;color:var(--tlt)">1.0</div></div>
+          </div>
+          <div style="display:flex;gap:4px;margin-top:5px"><span class="bx bgold" style="font-size:9px">Intro Ready</span><button style="margin-left:auto;padding:2px 7px;border-radius:3px;border:none;background:var(--navy);color:#fff;font-size:9px;cursor:pointer;font-family:inherit;font-weight:600">Send B2B →</button></div>
+        </div>
+        <div style="background:var(--bg);border-radius:6px;padding:8px;border:0.5px solid var(--bdr)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px"><div style="font-size:12px;font-weight:700;color:var(--navy)">GGGI</div><span class="bx ba">74% match</span></div>
+          <div style="font-size:10px;color:var(--mut);margin-bottom:4px">Dev. Partner · ₱10M–₱80M</div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px">
+            <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--tlt)">1.0</div>
+            <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--tlt)">1.0</div>
+            <div style="background:var(--aml);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--amt)">0.8</div>
+            <div style="background:var(--aml);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--amt)">0.5</div>
+            <div style="background:var(--rdl);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--rdt)">0.2</div>
+            <div style="background:var(--tll);border-radius:2px;padding:2px;text-align:center;font-size:8px;font-weight:700;color:var(--tlt)">1.0</div>
+          </div>
+        </div>
+        <div style="background:var(--bg);border-radius:6px;padding:8px;border:0.5px solid var(--bdr)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px"><div style="font-size:12px;font-weight:700;color:var(--navy)">ADB Philippines</div><span class="bx ba">71% match</span></div>
+          <div style="font-size:10px;color:var(--mut)">Multilateral · ₱50M+ preferred</div>
+        </div>
+        <div style="font-size:9px;color:var(--mut);text-align:center;padding:2px 0">Weights: Sector 30% · Ticket 25% · Cluster 20% · Stage 10% · Geo 10% · Bonus 5%</div>
+        <button class="gbtn" style="width:100%;padding:8px;font-size:11px">Send B2B Introduction →</button>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ CONSULTATIONS ════════════════ -->
+<div class="screen" id="cons">
+<div class="dual">
+<div><div class="plbl">Mobile — Consultations</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="ms">
+  <div class="tabs"><button class="tab on">Upcoming</button><button class="tab">Past</button><button class="tab">Create</button></div>
+  <div class="cc">
+    <div class="cch">
+      <div class="cdb"><div class="cdd">12</div><div class="cdm">APR</div></div>
+      <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy)">Cluster 1 Policy Dialogue</div><div style="font-size:10px;color:var(--mut)">9:00 AM · Manila · GIZ lead</div></div>
+      <span class="bx bb">Forum</span>
+    </div>
+    <div class="ccb">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
+        <div style="font-size:11px;color:var(--mut)">24 participants</div>
+        <div style="display:flex">
+          <div style="width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:var(--bll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--blt)">GZ</div>
+          <div style="width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:var(--tll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--tlt);margin-left:-5px">UN</div>
+          <div style="width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:var(--aml);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--amt);margin-left:-5px">+21</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--txt)">1. Policy gap review · 2. Regulatory barriers · 3. Investment framework</div>
+    </div>
+  </div>
+  <div class="cc">
+    <div class="cch">
+      <div class="cdb" style="background:var(--tll)"><div class="cdd">18</div><div class="cdm" style="color:var(--teal)">APR</div></div>
+      <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy)">Investment Mapping Forum</div><div style="font-size:10px;color:var(--mut)">9:00 AM · Virtual · IFC lead</div></div>
+      <span class="bx bt">WG</span>
+    </div>
+    <div class="ccb"><div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:11px;color:var(--mut)">38 registered</div><button class="mbtn mbs" style="width:auto;padding:4px 9px;font-size:10px;border-radius:5px;margin-top:0">Scan Card</button></div></div>
+  </div>
+  <div style="margin-top:9px">
+    <div style="font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">Live Notes (Apr 12)</div>
+    <textarea class="mi" rows="3" style="resize:none;font-size:11px">GIZ raised zoning conflicts as key barrier. DTI to prepare policy memo. BOI confirmed investment validation for Cluster 2...</textarea>
+    <div style="display:flex;gap:5px"><button class="mbtn mbs" style="flex:1;font-size:10px;border-radius:6px;padding:7px;margin-top:0">Tag: Decision</button><button class="mbtn mbp" style="flex:1;font-size:10px;border-radius:6px;padding:7px">Upload Minutes</button></div>
+  </div>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Consultation Manager + Insights</div>
+<div class="panel">
+<div class="ptop">
+  <div><div class="ptit">Cluster 1 Policy Dialogue — April 12, 2026</div><div class="psub">Working Group · GIZ Lead · 24 participants · Manila</div></div>
+  <div style="display:flex;gap:6px"><button class="dbtn">Send Invites</button><button class="gbtn">Upload Minutes</button></div>
+</div>
+<div class="pbody">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-bottom:10px">
+    <div class="card">
+      <div class="ch">Agenda</div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:4px">
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--bg);border-radius:4px;font-size:11px"><div style="width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">1</div><div style="flex:1">Opening and welcome</div><span style="color:var(--mut);font-size:10px">15 min</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--bll);border-radius:4px;font-size:11px;border:0.5px solid #B5CFE8"><div style="width:20px;height:20px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">2</div><div style="flex:1;color:var(--blt)">Policy gap review — GIZ</div><span style="color:var(--blue);font-size:10px">45 min</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--bg);border-radius:4px;font-size:11px"><div style="width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">3</div><div style="flex:1">Regulatory barriers — DTI</div><span style="color:var(--mut);font-size:10px">30 min</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--bg);border-radius:4px;font-size:11px"><div style="width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">4</div><div style="flex:1">Open forum and closing</div><span style="color:var(--mut);font-size:10px">30 min</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch">Participants (24) <button class="sbtn">+ Add</button></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:3px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:0.5px solid var(--bdr)"><div style="width:22px;height:22px;border-radius:4px;background:var(--bll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--blt)">MS</div><div style="flex:1"><div style="font-size:11px;font-weight:600;color:var(--navy)">Maria Santos</div><div style="font-size:10px;color:var(--mut)">GIZ · Lead</div></div><div style="width:12px;height:12px;border-radius:2px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center"><svg width="6" height="6" viewBox="0 0 6 6"><path d="M0.5 3l1.5 1.5 3.5-3.5" stroke="#1B7A5A" stroke-width="1.1" fill="none"/></svg></div></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:0.5px solid var(--bdr)"><div style="width:22px;height:22px;border-radius:4px;background:var(--tll);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--tlt)">AR</div><div style="flex:1"><div style="font-size:11px;font-weight:600;color:var(--navy)">Ana Reyes</div><div style="font-size:10px;color:var(--mut)">DTI · Policy</div></div><div style="width:12px;height:12px;border-radius:2px;background:var(--tll);border:0.5px solid var(--teal);display:flex;align-items:center;justify-content:center"><svg width="6" height="6" viewBox="0 0 6 6"><path d="M0.5 3l1.5 1.5 3.5-3.5" stroke="#1B7A5A" stroke-width="1.1" fill="none"/></svg></div></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 0"><div style="width:22px;height:22px;border-radius:4px;background:var(--gyl);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--gyt)">+21</div><div style="flex:1;font-size:11px;color:var(--mut)">21 more registered</div><span class="bx bb">18 attended</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="padding:11px">
+    <div class="section-head">Key Insights Extracted (8)</div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px">
+      <div style="background:var(--rdl);border-radius:5px;padding:7px 8px;border-left:3px solid var(--red)"><div style="font-size:10px;font-weight:700;color:var(--rdt);margin-bottom:2px">Regulatory Barrier</div><div style="font-size:11px;color:var(--rdt)">LGU zoning conflicts blocking agri-processing</div></div>
+      <div style="background:var(--tll);border-radius:5px;padding:7px 8px;border-left:3px solid var(--teal)"><div style="font-size:10px;font-weight:700;color:var(--tlt);margin-bottom:2px">Investor Interest</div><div style="font-size:11px;color:var(--tlt)">IFC confirmed ₱30M+ co-financing interest</div></div>
+      <div style="background:var(--bll);border-radius:5px;padding:7px 8px;border-left:3px solid var(--navy)"><div style="font-size:10px;font-weight:700;color:var(--blt);margin-bottom:2px">Policy Recommendation</div><div style="font-size:11px;color:var(--blt)">Fast-track BOI registration for green investment</div></div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ STAKEHOLDERS ════════════════ -->
+<div class="screen" id="stak">
+<div class="dual">
+<div><div class="plbl">Mobile — Stakeholders</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div class="ms">
+  <div class="tabs"><button class="tab on">Organizations</button><button class="tab">Contacts</button></div>
+  <input class="mi" placeholder="Search 52 organizations..." style="margin-bottom:7px">
+  <div style="display:flex;gap:3px;margin-bottom:9px;flex-wrap:wrap">
+    <span class="bx bb" style="cursor:pointer;padding:3px 8px">All</span>
+    <span class="bx bgr" style="cursor:pointer;padding:3px 8px">DFI</span>
+    <span class="bx bgr" style="cursor:pointer;padding:3px 8px">Chamber</span>
+    <span class="bx bgr" style="cursor:pointer;padding:3px 8px">Agency</span>
+  </div>
+  <div class="sk"><div class="skav" style="background:var(--bll);color:var(--blt);border:0.5px solid var(--bdr)">IFC</div><div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy)">International Finance Corp.</div><div style="font-size:11px;color:var(--mut)">Development Finance · C2+C3</div><div style="display:flex;gap:3px;margin-top:3px"><span class="bx bt">5 projects</span><span class="bx bb">Investor</span></div></div></div>
+  <div class="sk"><div class="skav" style="background:var(--tll);color:var(--tlt);border:0.5px solid var(--bdr)">GIZ</div><div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy)">GIZ Philippines</div><div style="font-size:11px;color:var(--mut)">Development Partner · Cluster 1 Lead</div><div style="display:flex;gap:3px;margin-top:3px"><span class="bx bb">Policy</span><span class="bx bt">4 consultations</span></div></div></div>
+  <div class="sk"><div class="skav" style="background:var(--aml);color:var(--amt);border:0.5px solid var(--bdr)">BOI</div><div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy)">Board of Investments</div><div style="font-size:11px;color:var(--mut)">Government Agency · All Clusters</div><div style="display:flex;gap:3px;margin-top:3px"><span class="bx ba">Validation</span><span class="bx bgr">7 linked</span></div></div></div>
+  <button class="mbtn mbs" style="margin-top:6px">+ Scan Business Card</button>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Stakeholder Registry</div>
+<div class="panel">
+<div class="ptop"><div class="ptit">Stakeholder Registry — 52 Organizations · 120 Contacts</div><div style="display:flex;gap:6px"><span class="bx bt">50+ Engaged</span><button class="gbtn">+ Add Org</button></div></div>
+<div class="pbody">
+  <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px">
+    <div class="card" style="overflow:hidden"><div style="overflow-x:auto">
+      <table class="dt" style="table-layout:fixed;width:100%">
+        <colgroup><col style="width:130px"><col style="width:75px"><col style="width:65px"><col style="width:55px"><col style="width:65px"></colgroup>
+        <thead><tr><th>Organization</th><th>Type</th><th>Cluster</th><th>Projects</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">IFC Philippines</div><div style="font-size:10px;color:var(--mut)">5 contacts</div></td><td><span class="bx bb">DFI</span></td><td><span class="bx bt">C2+C3</span></td><td style="font-size:11px;text-align:center">5</td><td><span class="bx bt">Active</span></td></tr>
+          <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">GIZ Philippines</div><div style="font-size:10px;color:var(--mut)">3 contacts</div></td><td><span class="bx bp">Partner</span></td><td><span class="bx bb">C1</span></td><td style="font-size:11px;text-align:center">4</td><td><span class="bx bt">Active</span></td></tr>
+          <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">UNDP Philippines</div><div style="font-size:10px;color:var(--mut)">2 contacts</div></td><td><span class="bx bp">Partner</span></td><td><span class="bx bb">C1</span></td><td style="font-size:11px;text-align:center">3</td><td><span class="bx bt">Active</span></td></tr>
+          <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Board of Investments</div><div style="font-size:10px;color:var(--mut)">4 contacts</div></td><td><span class="bx ba">Agency</span></td><td><span class="bx bgr">All</span></td><td style="font-size:11px;text-align:center">7</td><td><span class="bx bt">Active</span></td></tr>
+          <tr><td><div style="font-size:11px;font-weight:600;color:var(--navy)">EU Delegation PH</div><div style="font-size:10px;color:var(--mut)">3 contacts</div></td><td><span class="bx bb">Donor</span></td><td><span class="bx bgr">All</span></td><td style="font-size:11px;text-align:center">—</td><td><span class="bx bt">Active</span></td></tr>
+        </tbody>
+      </table>
+    </div></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card" style="padding:10px">
+        <div class="section-head">Partner Breakdown</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+          <div style="display:flex;align-items:center;gap:6px"><div style="font-size:11px;flex:1">EU Chambers</div><div style="flex:2;height:6px;background:var(--bdr);border-radius:2px;overflow:hidden"><div style="width:70%;height:100%;background:var(--navy)"></div></div><span style="font-size:11px;font-weight:600;color:var(--navy);width:20px;text-align:right">8</span></div>
+          <div style="display:flex;align-items:center;gap:6px"><div style="font-size:11px;flex:1">Agencies</div><div style="flex:2;height:6px;background:var(--bdr);border-radius:2px;overflow:hidden"><div style="width:55%;height:100%;background:var(--amber)"></div></div><span style="font-size:11px;font-weight:600;color:var(--navy);width:20px;text-align:right">7</span></div>
+          <div style="display:flex;align-items:center;gap:6px"><div style="font-size:11px;flex:1">Dev. Finance</div><div style="flex:2;height:6px;background:var(--bdr);border-radius:2px;overflow:hidden"><div style="width:45%;height:100%;background:var(--teal)"></div></div><span style="font-size:11px;font-weight:600;color:var(--navy);width:20px;text-align:right">6</span></div>
+          <div style="display:flex;align-items:center;gap:6px"><div style="font-size:11px;flex:1">Private Sector</div><div style="flex:2;height:6px;background:var(--bdr);border-radius:2px;overflow:hidden"><div style="width:80%;height:100%;background:var(--gold)"></div></div><span style="font-size:11px;font-weight:600;color:var(--navy);width:20px;text-align:right">22</span></div>
+          <div style="display:flex;align-items:center;gap:6px"><div style="font-size:11px;flex:1">LGUs</div><div style="flex:2;height:6px;background:var(--bdr);border-radius:2px;overflow:hidden"><div style="width:35%;height:100%;background:var(--green)"></div></div><span style="font-size:11px;font-weight:600;color:var(--navy);width:20px;text-align:right">9</span></div>
+        </div>
+      </div>
+      <div class="card" style="padding:10px">
+        <div class="section-head">Business Card OCR — AI Extract</div>
+        <div style="background:var(--bg);border-radius:6px;padding:9px;margin:8px 0;border:0.5px dashed var(--bdr2)">
+          <div style="font-size:12px;font-weight:700;color:var(--navy)">Juan dela Cruz</div>
+          <div style="font-size:11px;color:var(--mut)">Senior Investment Officer</div>
+          <div style="font-size:11px;color:var(--blue)">DTI Region IV-A</div>
+          <div style="font-size:11px;color:var(--mut)">jdelacruz@dti.gov.ph · +63 917 123 4567</div>
+        </div>
+        <div style="display:flex;gap:5px"><button class="tbtn" style="flex:1;padding:6px">Save Contact</button><button class="sbtn" style="flex:1;padding:6px">Edit Fields</button></div>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<!-- ════════════════ INTAKE FORMS ════════════════ -->
+<div class="screen" id="forms">
+<div class="dual">
+<div><div class="plbl">Mobile — Fill Intake Form</div>
+<div class="pwrap"><div class="pnotch"></div><div class="pscreen">
+<div class="pbar"><span>9:41</span><div class="pbar-logo">1PVN</div><span>●●●</span></div>
+<div class="eccp-strip"></div>
+<div style="background:var(--bg2);padding:4px 10px;display:flex;align-items:center;gap:5px;border-bottom:0.5px solid var(--bdr)">
+  <div style="flex:1;background:#fff;border:0.5px solid var(--bdr);border-radius:4px;padding:3px 7px;font-size:9px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">pscm.ph/forms/<b style="color:var(--navy)">investor-reg?ref=IFC-2604</b></div>
+</div>
+<div class="ms">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:9px;border-bottom:0.5px solid var(--bdr)">
+    <div style="width:30px;height:30px;border-radius:6px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--gold);flex-shrink:0;border-bottom:2px solid var(--gold)">1PVN</div>
+    <div><div style="font-size:12px;font-weight:700;color:var(--navy)">Investor Registration Form</div><div style="font-size:10px;color:var(--mut)">EU-GIZ Investment Facilitation Program</div></div>
+  </div>
+  <div class="steps"><div class="step done"></div><div class="step done"></div><div class="step act"></div><div class="step off"></div></div>
+  <div style="font-size:10px;color:var(--mut);margin:6px 0 10px">Step 3 of 4 — Investment Preferences</div>
+  <div class="ml">Minimum Ticket Size (USD)</div>
+  <select class="msel"><option>$500K – $1M</option><option selected>$1M – $5M</option><option>$5M – $20M</option><option>$20M+</option></select>
+  <div class="ml">Preferred Sectors</div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px">
+    <span style="padding:4px 10px;border-radius:3px;font-size:11px;font-weight:600;background:var(--navy);color:#fff;cursor:pointer;border:0.5px solid var(--navy)">Agri-Processing</span>
+    <span style="padding:4px 10px;border-radius:3px;font-size:11px;border:0.5px solid var(--bdr);color:var(--mut);cursor:pointer">Energy</span>
+    <span style="padding:4px 10px;border-radius:3px;font-size:11px;font-weight:600;background:var(--navy);color:#fff;cursor:pointer;border:0.5px solid var(--navy)">ESG / Carbon</span>
+    <span style="padding:4px 10px;border-radius:3px;font-size:11px;border:0.5px solid var(--bdr);color:var(--mut);cursor:pointer">Blue Economy</span>
+  </div>
+  <div class="ml">ESG Mandate?</div>
+  <div style="display:flex;gap:6px;margin-bottom:9px">
+    <div style="flex:1;padding:7px;border-radius:6px;border:1.5px solid var(--navy);background:var(--bll);text-align:center;font-size:12px;font-weight:600;color:var(--navy);cursor:pointer">Yes</div>
+    <div style="flex:1;padding:7px;border-radius:6px;border:0.5px solid var(--bdr);text-align:center;font-size:12px;color:var(--mut);cursor:pointer">No</div>
+  </div>
+  <div class="ml">Co-investor Openness</div>
+  <select class="msel"><option selected>Open to co-investment</option><option>Sole investor preferred</option><option>Flexible</option></select>
+  <div style="background:var(--tll);border-radius:6px;padding:8px 10px;margin-bottom:9px;border-left:3px solid var(--teal)">
+    <div style="font-size:10px;font-weight:700;color:var(--tlt);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.04em">Auto-Match Preview</div>
+    <div style="font-size:11px;color:var(--tlt)">8 active opportunities match your profile. You will be notified when new matches are found.</div>
+  </div>
+  <button class="mbtn mbp">Continue →</button>
+  <button class="mbtn mbs" style="margin-top:6px">← Back</button>
+  <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--mut)">Secured by 1PVN · All data encrypted · <span style="color:var(--navy);font-weight:600">pscm.ph</span></div>
+</div>
+<div class="phome"><div class="hdot"></div><div class="hdot" style="background:var(--navy)"></div><div class="hdot"></div></div>
+</div></div></div>
+
+<div><div class="wlbl">Web — Send Links · Track Responses · Auto-Import</div>
+<div class="panel">
+<div class="ptop">
+  <div><div class="ptit">Intake Forms — Send, Track &amp; Receive</div><div class="psub">Custom links for investors, proponents, and LGUs · Responses auto-import to pipeline</div></div>
+  <div style="display:flex;gap:6px"><button class="dbtn">+ New Form</button><button class="gbtn">Send Link →</button></div>
+</div>
+<div class="pbody">
+  <div class="krow">
+    <div class="kcard"><div class="klbl">Forms Sent</div><div class="kval">38</div><div class="kdelta">This month</div></div>
+    <div class="kcard"><div class="klbl">Responses</div><div class="kval">29</div><div class="kdelta">76% completion</div></div>
+    <div class="kcard"><div class="klbl">Auto-Imported</div><div class="kval">21</div><div class="kdelta">To pipeline</div></div>
+    <div class="kcard"><div class="klbl">Pending Review</div><div class="kval">8</div><div class="kdelta">Awaiting staff</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px;margin-bottom:10px">
+    <div class="card">
+      <div class="ch">Form Templates <span class="bx bb">4 active</span></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--bg);border-radius:6px;padding:10px;border:0.5px solid var(--bdr);border-left:3px solid var(--gold)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div><div style="font-size:12px;font-weight:700;color:var(--navy)">Investor Registration</div><div style="font-size:10px;color:var(--mut)">4 sections · 18 fields · Multi-language</div></div><span class="bx bt">Active</span></div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:6px">pscm.ph/forms/<b style="color:var(--navy)">investor-reg</b></div>
+          <div style="display:flex;gap:5px;align-items:center"><span style="font-size:10px;background:var(--tll);color:var(--tlt);padding:2px 7px;border-radius:3px;font-weight:600">22 responses</span><span style="font-size:10px;color:var(--mut)">Last: 2h ago</span><button style="margin-left:auto;padding:3px 8px;border-radius:3px;border:none;background:var(--navy);color:#fff;font-size:10px;cursor:pointer;font-family:inherit">Send Link</button><button class="sbtn">QR Code</button></div>
+        </div>
+        <div style="background:var(--bg);border-radius:6px;padding:10px;border:0.5px solid var(--bdr);border-left:3px solid var(--gold)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div><div style="font-size:12px;font-weight:700;color:var(--navy)">Project Proponent Intake</div><div style="font-size:10px;color:var(--mut)">5 sections · 24 fields · File upload</div></div><span class="bx bt">Active</span></div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:6px">pscm.ph/forms/<b style="color:var(--navy)">project-intake</b></div>
+          <div style="display:flex;gap:5px;align-items:center"><span style="font-size:10px;background:var(--tll);color:var(--tlt);padding:2px 7px;border-radius:3px;font-weight:600">12 responses</span><span style="font-size:10px;color:var(--mut)">Last: 4h ago</span><button style="margin-left:auto;padding:3px 8px;border-radius:3px;border:none;background:var(--navy);color:#fff;font-size:10px;cursor:pointer;font-family:inherit">Send Link</button><button class="sbtn">QR Code</button></div>
+        </div>
+        <div style="background:var(--bg);border-radius:6px;padding:10px;border:0.5px solid var(--bdr)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px"><div><div style="font-size:12px;font-weight:700;color:var(--navy)">LGU Endorsement Request</div><div style="font-size:10px;color:var(--mut)">3 sections · 11 fields · DocuSeal e-sign</div></div><span class="bx ba">Draft</span></div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:6px">pscm.ph/forms/<b style="color:var(--sub)">lgu-endorse</b></div>
+          <div style="display:flex;gap:5px;align-items:center"><span style="font-size:10px;background:var(--aml);color:var(--amt);padding:2px 7px;border-radius:3px;font-weight:600">Not published</span><button class="sbtn" style="margin-left:auto">Edit Draft</button></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card">
+        <div class="ch">Send Personalized Link</div>
+        <div class="cb">
+          <div style="font-size:10px;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;font-weight:600">Recipient</div>
+          <input type="text" value="Juan dela Cruz — IFC Philippines" style="width:100%;border:0.5px solid var(--bdr);border-radius:5px;padding:7px 9px;font-size:11px;font-family:inherit;background:#fff;color:var(--txt);margin-bottom:8px;outline:none">
+          <div style="font-size:10px;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;font-weight:600">Form Template</div>
+          <select style="width:100%;border:0.5px solid var(--bdr);border-radius:5px;padding:7px 9px;font-size:11px;font-family:inherit;background:#fff;color:var(--txt);margin-bottom:8px;outline:none;appearance:none"><option selected>Investor Registration</option><option>Project Proponent Intake</option><option>LGU Endorsement Request</option></select>
+          <div style="font-size:10px;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;font-weight:600">Personal Message</div>
+          <textarea style="width:100%;border:0.5px solid var(--bdr);border-radius:5px;padding:7px 9px;font-size:11px;font-family:inherit;background:#fff;color:var(--txt);margin-bottom:8px;outline:none;resize:none;height:50px">Dear Juan, please complete your investor registration for the EU-GIZ Investment Facilitation Program.</textarea>
+          <div style="background:var(--bg2);border-radius:5px;padding:8px 10px;margin-bottom:8px;border:0.5px solid var(--bdr);display:flex;align-items:center;gap:8px">
+            <div style="flex:1"><div style="font-size:10px;color:var(--mut);margin-bottom:2px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Generated link</div><div style="font-size:11px;color:var(--navy)">pscm.ph/forms/investor-reg?ref=<b>IFC-2604</b></div></div>
+            <button class="sbtn" style="flex-shrink:0">Copy</button>
+          </div>
+          <div style="display:flex;gap:5px"><button class="gbtn" style="flex:1;padding:7px">Send Email</button><button class="sbtn" style="flex:1;padding:7px">WhatsApp</button><button class="sbtn" style="padding:7px 10px">QR</button></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch">QR Code — Print &amp; Share at Events</div>
+        <div class="cb"><div style="display:flex;gap:12px;align-items:center">
+          <div style="width:68px;height:68px;background:#fff;border:1px solid var(--bdr);border-radius:4px;padding:5px;flex-shrink:0;display:grid;grid-template-columns:repeat(7,1fr);gap:1px">
+            <div style="background:var(--navy);grid-column:1/4;grid-row:1/4;border-radius:1px"></div>
+            <div></div><div style="background:var(--navy);border-radius:1px"></div><div></div><div style="background:var(--navy);border-radius:1px"></div>
+            <div style="background:var(--navy);grid-column:5/8;grid-row:1/4;border-radius:1px"></div>
+            <div></div><div style="background:var(--navy);border-radius:1px"></div><div></div><div style="background:var(--navy);border-radius:1px"></div>
+            <div></div><div style="background:var(--navy);border-radius:1px"></div><div></div>
+            <div style="background:var(--navy);grid-column:1/4;grid-row:5/8;border-radius:1px"></div>
+            <div></div><div style="background:var(--navy);border-radius:1px"></div><div></div><div style="background:var(--navy);border-radius:1px"></div>
+            <div></div><div style="background:var(--navy);border-radius:1px"></div>
+          </div>
+          <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:2px">Investor Registration</div><div style="font-size:11px;color:var(--mut);margin-bottom:6px">Scan on any phone · No app needed</div><button class="sbtn" style="width:100%;padding:6px;text-align:center">Download PNG for Print</button></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="overflow:hidden">
+    <div class="ch">Recent Responses — Auto-imported to System <div style="display:flex;gap:5px"><span class="bx bt">21 Imported</span><span class="bx ba">8 Pending</span></div></div>
+    <div style="overflow-x:auto">
+      <table class="dt" style="table-layout:fixed;width:100%">
+        <colgroup><col style="width:60px"><col style="width:140px"><col style="width:130px"><col style="width:110px"><col style="width:80px"><col style="width:80px"><col style="width:110px"></colgroup>
+        <thead><tr><th>Time</th><th>Name</th><th>Organization</th><th>Form</th><th>Status</th><th>Action</th><th>Imported To</th></tr></thead>
+        <tbody>
+          <tr><td style="font-size:10px;color:var(--mut)">2h ago</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Juan dela Cruz</div><div style="font-size:10px;color:var(--mut)">jdc@ifc.org</div></td><td style="font-size:11px">IFC Philippines</td><td><span class="bx bb">Investor Reg.</span></td><td><span class="bx bt">Complete</span></td><td><span class="bx bt">Imported</span></td><td style="font-size:11px;color:var(--navy);cursor:pointer;font-weight:600">Stakeholders → IFC</td></tr>
+          <tr><td style="font-size:10px;color:var(--mut)">4h ago</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Ana Reyes</div><div style="font-size:10px;color:var(--mut)">ana@qac.ph</div></td><td style="font-size:11px">Quezon Agri Corp</td><td><span class="bx bt">Project Intake</span></td><td><span class="bx bt">Complete</span></td><td><span class="bx bt">Imported</span></td><td style="font-size:11px;color:var(--navy);cursor:pointer;font-weight:600">Pipeline → 1PVN-0047</td></tr>
+          <tr><td style="font-size:10px;color:var(--mut)">Yesterday</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Peter Bautista</div><div style="font-size:10px;color:var(--mut)">pb@gggi.org</div></td><td style="font-size:11px">GGGI</td><td><span class="bx bb">Investor Reg.</span></td><td><span class="bx ba">Partial</span></td><td><span class="bx ba">Pending</span></td><td><button style="padding:2px 8px;border-radius:3px;border:none;background:var(--aml);color:var(--amt);font-size:10px;font-weight:600;cursor:pointer;font-family:inherit">Send Reminder</button></td></tr>
+          <tr><td style="font-size:10px;color:var(--mut)">Yesterday</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Jose Tan</div><div style="font-size:10px;color:var(--mut)">jt@dcc.ph</div></td><td style="font-size:11px">Davao Cold Chain</td><td><span class="bx bt">Project Intake</span></td><td><span class="bx bt">Complete</span></td><td><span class="bx bt">Imported</span></td><td style="font-size:11px;color:var(--navy);cursor:pointer;font-weight:600">Pipeline → 1PVN-0044</td></tr>
+          <tr><td style="font-size:10px;color:var(--mut)">Apr 7</td><td><div style="font-size:11px;font-weight:600;color:var(--navy)">Rose Lim</div><div style="font-size:10px;color:var(--mut)">rlim@boi.gov.ph</div></td><td style="font-size:11px">Board of Investments</td><td><span class="bx bb">Investor Reg.</span></td><td><span class="bx bgr">Not opened</span></td><td><span class="bx bgr">Pending</span></td><td><button style="padding:2px 8px;border-radius:3px;border:none;background:var(--navy);color:#fff;font-size:10px;font-weight:600;cursor:pointer;font-family:inherit">Resend Link</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div>
+</div>
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('on'));
+  var el=document.getElementById(id);
+  if(el) el.classList.add('on');
+  var m={dash:0,sub:1,pipe:2,cons:3,min:4,prof:5,stak:6,forms:7};
+  var tabs=document.querySelectorAll('.ntab');
+  if(m[id]!==undefined&&tabs[m[id]]) tabs[m[id]].classList.add('on');
+  window.scrollTo(0,0);
+}
+// Deep-link support: demo.html#cons opens the Consultations screen, etc.
+window.addEventListener('DOMContentLoaded',function(){
+  var h=(location.hash||'').replace('#','');
+  if(h&&document.getElementById(h)) go(h);
+});
+window.addEventListener('hashchange',function(){
+  var h=(location.hash||'').replace('#','');
+  if(h&&document.getElementById(h)) go(h);
+});
+</script>
+</body>
+</html>
