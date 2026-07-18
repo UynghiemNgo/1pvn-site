@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1PVN — Private Sector Consultation Management Platform</title>
-  <meta name="description" content="1PVN is the Private Sector Consultation Management Platform for chambers, embassies, development partners, and government programs — facilitate consultations, manage investment pipelines, coordinate project intake, and turn structured data into economic action." />
+  <title>1PVN — Investment Facilitation Platform</title>
+  <meta name="description" content="1PVN is an investment facilitation platform for chambers, development partners, embassies, and government programmes — consultation management, investment pipeline, stakeholder coordination, and structured reporting in one system." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -16,15 +16,14 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="1PVN home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="34" height="34" role="img">
+          <svg viewBox="0 0 24 24" width="32" height="32" role="img">
             <defs>
               <linearGradient id="boltGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2dd4bf"/>
-                <stop offset="50%" stop-color="#38bdf8"/>
-                <stop offset="100%" stop-color="#fb7185"/>
+                <stop offset="0%" stop-color="#0ea5e9"/>
+                <stop offset="100%" stop-color="#0284c7"/>
               </linearGradient>
             </defs>
-            <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#boltGrad)"/>
+            <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#boltGrad)"/>
             <path d="M13 2 L4 14 h6 l-1 8 9 -12 h-6 z" fill="#ffffff"/>
           </svg>
         </span>
@@ -32,8 +31,8 @@
       </a>
 
       <nav class="site-nav" aria-label="Primary">
-        <a href="#matching">Matching</a>
-        <a href="#channels">Coordination</a>
+        <a href="#tour">Tour</a>
+        <a href="#platform">Platform</a>
         <a href="#ai">AI</a>
         <a href="#demo">Demo</a>
         <a href="https://app.1pvn.com/docs">Docs</a>
@@ -47,261 +46,213 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="blob blob-1" aria-hidden="true"></div>
-      <div class="blob blob-2" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="eyebrow">👋 Private Sector Mechanism, made friendly</p>
-        <h1>Private Sector<br><span class="grad-text">Consultation Management</span><br>Platform</h1>
+        <p class="eyebrow">Investment Facilitation Platform</p>
+        <h1>One system to run your<br><span class="grad-text">investment facilitation</span> programme</h1>
         <p class="lead">
-          Facilitate consultations, manage investment pipelines, and coordinate economic
-          activity across chambers, embassies, development partners, and government programs.
-          1PVN moves you from scattered stakeholder records and manual intake forms to one
-          structured, welcoming place your whole team will enjoy using.
+          1PVN brings consultation management, investment pipeline, stakeholder
+          coordination, and structured reporting into a single platform — built for
+          chambers, development partners, embassies, and government programmes.
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#demo">Explore Demo Version</a>
-          <a class="btn btn-ghost" href="https://app.1pvn.com">Sign in</a>
+          <a class="btn btn-primary" href="#tour">See the platform</a>
+          <a class="btn btn-ghost" href="#demo">Try the demo</a>
         </div>
-        <p class="hero-note">Consultation management • Investment facilitation • Your data, your region</p>
+        <p class="hero-note">Consultation management · Investment pipeline · Reporting &amp; audit trail</p>
       </div>
     </section>
 
-    <!-- ===== Matching preview (centerpiece) ===== -->
-    <section class="section" id="matching">
+    <!-- ===== Product tour (real screenshots) ===== -->
+    <section class="section" id="tour">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">🤝 Investor match management</p>
-          <h2>Pair the right investor with the right opportunity</h2>
+          <p class="eyebrow">Product tour</p>
+          <h2>See the platform in action</h2>
           <p class="section-sub">
-            A calm, visual matching board your team will love. See investors, opportunities,
-            and smart suggested matches side by side — then move them forward together.
+            A walkthrough of the actual system — from intake and consultations to
+            the investment pipeline and reporting.
           </p>
         </div>
 
-        <div class="board" role="img" aria-label="Matching board preview showing investors, opportunities, and suggested matches with match scores and status chips">
-          <!-- Investors column -->
-          <div class="board-col">
-            <div class="board-col-head">
-              <span class="col-dot dot-sky" aria-hidden="true"></span>
-              <h3>Investors</h3>
-              <span class="count">12</span>
-            </div>
-            <article class="mini-card">
-              <div class="avatar grad-sky" aria-hidden="true">NV</div>
-              <div>
-                <p class="mc-title">Nordvind Capital</p>
-                <p class="mc-sub">Renewables • €40M ticket</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <div class="avatar grad-mint" aria-hidden="true">AG</div>
-              <div>
-                <p class="mc-title">Aurora Growth</p>
-                <p class="mc-sub">Agritech • Series B</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <div class="avatar grad-coral" aria-hidden="true">KH</div>
-              <div>
-                <p class="mc-title">Kalye Holdings</p>
-                <p class="mc-sub">Infrastructure • PPP</p>
-              </div>
-            </article>
+        <div class="tour-window" id="tourWindow">
+          <div class="tour-bar" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="tour-url">app.1pvn.com</span>
           </div>
-
-          <!-- Suggested matches column -->
-          <div class="board-col board-col-center">
-            <div class="board-col-head">
-              <span class="col-dot dot-coral" aria-hidden="true"></span>
-              <h3>Suggested matches</h3>
-              <span class="badge-ai">AI</span>
+          <div class="tour-stage" aria-label="Screenshots of the 1PVN platform" role="group">
+            <div class="tour-slide on" data-title="Programme dashboard" data-sub="Live pipeline, consultations, and activity at a glance.">
+              <img src="assets/tour/tour-dash.jpeg" width="1400" height="780" alt="1PVN dashboard showing submissions, pipeline value, investor matches, and a pipeline board." />
             </div>
-
-            <article class="match-card">
-              <div class="match-row">
-                <span class="chip chip-investor">Nordvind Capital</span>
-                <span class="link-icon" aria-hidden="true">↔</span>
-                <span class="chip chip-opp">Cebu Solar Park</span>
-              </div>
-              <div class="match-meta">
-                <span class="score-pill score-high">92% match</span>
-                <span class="status-chip status-suggested">Suggested</span>
-              </div>
-            </article>
-
-            <article class="match-card">
-              <div class="match-row">
-                <span class="chip chip-investor">Aurora Growth</span>
-                <span class="link-icon" aria-hidden="true">↔</span>
-                <span class="chip chip-opp">GreenHarvest Co-op</span>
-              </div>
-              <div class="match-meta">
-                <span class="score-pill score-mid">84% match</span>
-                <span class="status-chip status-introduced">Introduced</span>
-              </div>
-            </article>
-
-            <article class="match-card">
-              <div class="match-row">
-                <span class="chip chip-investor">Kalye Holdings</span>
-                <span class="link-icon" aria-hidden="true">↔</span>
-                <span class="chip chip-opp">Davao Transit Hub</span>
-              </div>
-              <div class="match-meta">
-                <span class="score-pill score-high">90% match</span>
-                <span class="status-chip status-progress">In progress</span>
-              </div>
-            </article>
-          </div>
-
-          <!-- Opportunities column -->
-          <div class="board-col">
-            <div class="board-col-head">
-              <span class="col-dot dot-mint" aria-hidden="true"></span>
-              <h3>Opportunities</h3>
-              <span class="count">18</span>
+            <div class="tour-slide" data-title="Intake &amp; submission queue" data-sub="Public submissions triaged and converted into the pipeline.">
+              <img src="assets/tour/tour-sub.jpeg" width="1400" height="780" loading="lazy" alt="1PVN submission queue with a submission-to-pipeline flow and review actions." />
             </div>
-            <article class="mini-card">
-              <div class="avatar grad-mint" aria-hidden="true">CS</div>
-              <div>
-                <p class="mc-title">Cebu Solar Park</p>
-                <p class="mc-sub">Energy • Cluster 3</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <div class="avatar grad-sky" aria-hidden="true">GH</div>
-              <div>
-                <p class="mc-title">GreenHarvest Co-op</p>
-                <p class="mc-sub">Sustainable • Cluster 2</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <div class="avatar grad-coral" aria-hidden="true">DT</div>
-              <div>
-                <p class="mc-title">Davao Transit Hub</p>
-                <p class="mc-sub">Infrastructure • PPP</p>
-              </div>
-            </article>
+            <div class="tour-slide" data-title="Investment pipeline &amp; scoring" data-sub="Staged pipeline with composite scoring, gate checks, and matching.">
+              <img src="assets/tour/tour-pipe.jpeg" width="1400" height="780" loading="lazy" alt="1PVN investment pipeline table with scoring engine, gate checks, and matching algorithm." />
+            </div>
+            <div class="tour-slide" data-title="Consultation management" data-sub="Agenda, attendance, and AI-extracted insights from each session.">
+              <img src="assets/tour/tour-cons.jpeg" width="1400" height="780" loading="lazy" alt="1PVN consultation manager with agenda, participants, and extracted key insights." />
+            </div>
+            <div class="tour-slide" data-title="AI minutes review" data-sub="Minutes turned into structured decisions, actions, and policy flags.">
+              <img src="assets/tour/tour-min.jpeg" width="1400" height="780" loading="lazy" alt="1PVN AI minutes review showing original document beside AI-extracted decisions and actions." />
+            </div>
+            <div class="tour-slide" data-title="Stakeholder registry" data-sub="Organisations, contacts, and the full engagement history.">
+              <img src="assets/tour/tour-stak.jpeg" width="1400" height="780" loading="lazy" alt="1PVN stakeholder registry listing organisations, partner breakdown, and business-card capture." />
+            </div>
           </div>
+        </div>
+
+        <div class="tour-controls">
+          <button class="tour-arrow" id="tourPrev" type="button" aria-label="Previous screen">‹</button>
+          <div class="tour-meta">
+            <div class="tour-caption">
+              <strong id="tourCapTitle">Programme dashboard</strong>
+              <span id="tourCapSub">Live pipeline, consultations, and activity at a glance.</span>
+            </div>
+            <div class="tour-dots" role="tablist" aria-label="Choose a screen">
+              <button class="tour-dot on" type="button" aria-label="Dashboard"></button>
+              <button class="tour-dot" type="button" aria-label="Intake"></button>
+              <button class="tour-dot" type="button" aria-label="Pipeline"></button>
+              <button class="tour-dot" type="button" aria-label="Consultations"></button>
+              <button class="tour-dot" type="button" aria-label="AI minutes"></button>
+              <button class="tour-dot" type="button" aria-label="Stakeholders"></button>
+            </div>
+          </div>
+          <button class="tour-arrow" id="tourNext" type="button" aria-label="Next screen">›</button>
         </div>
       </div>
     </section>
 
-    <!-- ===== Omnichannel ===== -->
-    <section class="section section-tint" id="channels">
+    <!-- ===== Capabilities (TOR pillars) ===== -->
+    <section class="section section-tint" id="platform">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">💬 Partner coordination &amp; omnichannel</p>
-          <h2>Coordinate stakeholders where they are</h2>
+          <p class="eyebrow">Capabilities</p>
+          <h2>Everything the programme needs, in one place</h2>
           <p class="section-sub">
-            Reach investors, partners, embassies, and LGUs on every channel — without juggling
-            five different tools. It all lives in 1PVN, neatly tied to each stakeholder record.
+            Four connected areas covering the full programme cycle — from public
+            intake to final reporting.
           </p>
         </div>
 
         <div class="card-grid">
           <article class="feature-card">
-            <span class="feature-icon ic-sky" aria-hidden="true">✉️</span>
-            <h3>Email campaigns</h3>
-            <p>Send warm, on-brand updates and invitations with open and click tracking.</p>
+            <span class="feature-kicker">Public Portal &amp; Intake</span>
+            <h3>Bring opportunities in</h3>
+            <ul>
+              <li>Guided opportunity submission wizard</li>
+              <li>Investor and partner registration</li>
+              <li>Document upload and consultation registration</li>
+              <li>Submission tracking and electronic signatures</li>
+            </ul>
           </article>
+
           <article class="feature-card">
-            <span class="feature-icon ic-mint" aria-hidden="true">📅</span>
-            <h3>Event invites &amp; RSVPs</h3>
-            <p>Beautiful invites with iCal, reminders, QR check-in, and live RSVP status.</p>
+            <span class="feature-kicker">Consultation Management</span>
+            <h3>Run structured consultations</h3>
+            <ul>
+              <li>Agenda builder and participant registration</li>
+              <li>Live notes capture and attendance tracking</li>
+              <li>Minutes upload → AI extraction → structured summary</li>
+              <li>Action item tracking and policy-flag workflow</li>
+            </ul>
           </article>
+
           <article class="feature-card">
-            <span class="feature-icon ic-coral" aria-hidden="true">🔗</span>
-            <h3>Shareable links</h3>
-            <p>One tidy link for registrations, tracking, and submissions — no friction.</p>
+            <span class="feature-kicker">Investment Pipeline</span>
+            <h3>Move projects forward</h3>
+            <ul>
+              <li>Staged pipeline with automated gate checks</li>
+              <li>Composite scoring and risk register per project</li>
+              <li>Investor matchmaking and B2B meeting tracking</li>
+              <li>MoU and partnership agreement workflow</li>
+            </ul>
           </article>
+
           <article class="feature-card">
-            <span class="feature-icon ic-mint" aria-hidden="true">📊</span>
-            <h3>Engagement scoring</h3>
-            <p>See who's leaning in, so you can follow up at just the right moment.</p>
+            <span class="feature-kicker">Reporting &amp; Documentation</span>
+            <h3>Turn activity into outputs</h3>
+            <ul>
+              <li>Policy notes generated from consultation insights</li>
+              <li>Quarterly and final report builder</li>
+              <li>KPI and indicator tracking</li>
+              <li>Complete, exportable audit trail</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== AI integration ===== -->
+    <!-- ===== AI ===== -->
     <section class="section" id="ai">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">✨ AI built in</p>
-          <h2>Your friendly AI co-pilot</h2>
+          <p class="eyebrow">AI, with a human in the loop</p>
+          <h2>AI handles the busywork — people make the decisions</h2>
           <p class="section-sub">
-            1PVN does the tedious bits so your team can focus on relationships.
-            Everything stays a draft until a human says yes.
+            Every AI output is a draft. Nothing is finalised or sent without a
+            person reviewing it first.
           </p>
         </div>
 
-        <div class="card-grid">
-          <article class="feature-card ai-card">
-            <span class="feature-icon ic-sky" aria-hidden="true">🎯</span>
-            <h3>Investor–opportunity matching</h3>
-            <p>Smart suggestions with match scores, so the best pairings rise to the top.</p>
+        <div class="card-grid cols-3">
+          <article class="feature-card">
+            <span class="feature-kicker">Document drafting</span>
+            <h3>First drafts in seconds</h3>
+            <p>Concept notes, policy briefs, and reports drafted from your data — ready for you to refine and approve.</p>
           </article>
-          <article class="feature-card ai-card">
-            <span class="feature-icon ic-coral" aria-hidden="true">📄</span>
-            <h3>Document drafting</h3>
-            <p>First drafts of concept notes and policy briefs in your voice, in seconds.</p>
+          <article class="feature-card">
+            <span class="feature-kicker">Data extraction</span>
+            <h3>Notes into structured records</h3>
+            <p>Meeting minutes, business cards, and uploads become clean, structured records — no manual re-typing.</p>
           </article>
-          <article class="feature-card ai-card">
-            <span class="feature-icon ic-mint" aria-hidden="true">🪪</span>
-            <h3>Data extraction</h3>
-            <p>Snap a business card or upload notes — contacts and details fill themselves in.</p>
+          <article class="feature-card">
+            <span class="feature-kicker">Investor matching</span>
+            <h3>Suggested matches, scored</h3>
+            <p>Investor–opportunity suggestions with match scores, so the strongest pairings surface for review.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===== Demo Version ===== -->
-    <section class="section" id="demo">
+    <section class="section section-tint" id="demo">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">🚀 Demo Version</p>
-          <h2>Explore the platform, no setup required</h2>
+          <p class="eyebrow">Interactive demo</p>
+          <h2>Click through it yourself</h2>
           <p class="section-sub">
-            Open any area below to explore an interactive walkthrough of the
-            platform — no sign-in, no setup, just click through.
+            Open any area below for a hands-on walkthrough — no sign-in, no setup.
           </p>
         </div>
 
-        <div class="card-grid demo-grid">
+        <div class="card-grid cols-3 demo-grid">
           <a class="feature-card demo-card" href="demo.html#cons" target="_blank" rel="noopener">
-            <span class="feature-icon ic-sky" aria-hidden="true">🗣️</span>
             <h3>Consultation Management <span class="demo-arrow" aria-hidden="true">→</span></h3>
             <p>Schedule consultations, track attendance, capture agenda and minutes.</p>
           </a>
           <a class="feature-card demo-card" href="demo.html#sub" target="_blank" rel="noopener">
-            <span class="feature-icon ic-mint" aria-hidden="true">📥</span>
             <h3>Project Intake <span class="demo-arrow" aria-hidden="true">→</span></h3>
             <p>Review submitted projects, triage status, and move them into the pipeline.</p>
           </a>
           <a class="feature-card demo-card" href="demo.html#pipe" target="_blank" rel="noopener">
-            <span class="feature-icon ic-coral" aria-hidden="true">🤝</span>
-            <h3>Investment Matching <span class="demo-arrow" aria-hidden="true">→</span></h3>
-            <p>See investor–opportunity matches with scores and approval workflow.</p>
+            <h3>Investment Pipeline <span class="demo-arrow" aria-hidden="true">→</span></h3>
+            <p>See the staged pipeline with composite scores and gate checks.</p>
           </a>
           <a class="feature-card demo-card" href="demo.html#min" target="_blank" rel="noopener">
-            <span class="feature-icon ic-sky" aria-hidden="true">📄</span>
-            <h3>Document Review <span class="demo-arrow" aria-hidden="true">→</span></h3>
-            <p>Draft, version, and approve concept notes, policy briefs, and reports.</p>
+            <h3>AI Minutes Review <span class="demo-arrow" aria-hidden="true">→</span></h3>
+            <p>Turn uploaded minutes into structured decisions, actions, and policy flags.</p>
           </a>
           <a class="feature-card demo-card" href="demo.html#stak" target="_blank" rel="noopener">
-            <span class="feature-icon ic-mint" aria-hidden="true">🏢</span>
             <h3>Stakeholder Directory <span class="demo-arrow" aria-hidden="true">→</span></h3>
-            <p>Organizations, contacts, and the full engagement history in one place.</p>
+            <p>Organisations, contacts, and the full engagement history in one place.</p>
           </a>
           <a class="feature-card demo-card" href="demo.html#dash" target="_blank" rel="noopener">
-            <span class="feature-icon ic-coral" aria-hidden="true">📊</span>
-            <h3>Economic Activity Dashboard <span class="demo-arrow" aria-hidden="true">→</span></h3>
+            <h3>Programme Dashboard <span class="demo-arrow" aria-hidden="true">→</span></h3>
             <p>Live pipeline, consultations, and engagement metrics at a glance.</p>
           </a>
         </div>
 
-        <p class="demo-note">Demo sign-in is pre-filled — <code>demo@eccp.com</code> / <code>demo2026</code></p>
+        <p class="demo-note">No sign-in required — an interactive walkthrough of the platform.</p>
       </div>
     </section>
 
@@ -310,12 +261,12 @@
       <div class="container residency-inner">
         <span class="residency-icon" aria-hidden="true">🌍</span>
         <p>
-          <strong>Choose where your data is stored.</strong> 1PVN supports data residency
-          requirements by organization, country, or deployment region —
+          <strong>Choose where your data lives.</strong> 1PVN can be deployed in the
+          region you choose —
           <span class="region-pill">EU</span>
           <span class="region-pill">USA</span>
           <span class="region-pill">Asia</span>
-          — so you stay compliant with national and institutional rules.
+          — so your data stays where your organisation needs it.
         </p>
       </div>
     </section>
@@ -323,9 +274,9 @@
     <!-- ===== CTA band ===== -->
     <section class="cta-band">
       <div class="container cta-inner">
-        <h2>Ready to bring your consultations online?</h2>
-        <p>Join the chambers, embassies, and programs making investment facilitation structured and friendly.</p>
-        <a class="btn btn-light" href="#demo">Explore Demo Version</a>
+        <h2>Bring your programme into one system</h2>
+        <p>From the first consultation to the final report — coordinated, tracked, and documented in one place.</p>
+        <a class="btn btn-light" href="#tour">See the platform</a>
       </div>
     </section>
 
@@ -337,18 +288,18 @@
       <div class="footer-brand">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="30" height="30" role="img">
-            <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#boltGrad)"/>
+            <rect x="0" y="0" width="24" height="24" rx="6" fill="url(#boltGrad)"/>
             <path d="M13 2 L4 14 h6 l-1 8 9 -12 h-6 z" fill="#ffffff"/>
           </svg>
         </span>
         <div>
           <p class="brand-name">1PVN</p>
-          <p class="footer-tag">Private Sector Consultation Management Platform.</p>
+          <p class="footer-tag">Investment Facilitation Platform.</p>
         </div>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="#matching">Matching</a>
-        <a href="#channels">Coordination</a>
+        <a href="#tour">Tour</a>
+        <a href="#platform">Platform</a>
         <a href="#ai">AI</a>
         <a href="#demo">Demo</a>
         <a href="https://app.1pvn.com/docs">Docs</a>
@@ -359,12 +310,44 @@
       </nav>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> 1PVN. Made with care for private-sector mechanisms.<br>Operated by <a href="https://brabbletc.com">Brabble Trading Corporation</a>.</p>
+      <p>&copy; <span id="year">2026</span> 1PVN.<br>Operated by <a href="https://brabbletc.com">Brabble Trading Corporation</a>.</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Product tour carousel =====
+    (function () {
+      var slides = [].slice.call(document.querySelectorAll('.tour-slide'));
+      var dots = [].slice.call(document.querySelectorAll('.tour-dot'));
+      var capTitle = document.getElementById('tourCapTitle');
+      var capSub = document.getElementById('tourCapSub');
+      var win = document.getElementById('tourWindow');
+      if (!slides.length) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var i = 0, timer = null;
+
+      function show(n) {
+        i = (n + slides.length) % slides.length;
+        slides.forEach(function (s, x) { s.classList.toggle('on', x === i); });
+        dots.forEach(function (d, x) { d.classList.toggle('on', x === i); });
+        var s = slides[i];
+        capTitle.textContent = s.getAttribute('data-title');
+        capSub.textContent = s.getAttribute('data-sub');
+      }
+      function start() { if (reduce) return; stop(); timer = setInterval(function () { show(i + 1); }, 4500); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      dots.forEach(function (d, x) { d.addEventListener('click', function () { show(x); start(); }); });
+      document.getElementById('tourNext').addEventListener('click', function () { show(i + 1); start(); });
+      document.getElementById('tourPrev').addEventListener('click', function () { show(i - 1); start(); });
+      win.addEventListener('mouseenter', stop);
+      win.addEventListener('mouseleave', start);
+
+      show(0);
+      start();
+    })();
   </script>
 </body>
 </html>
